@@ -14,3 +14,13 @@ https://docs.google.com/spreadsheets/d/1INXGfX8B7ivksHwwNPyAl2p5AWdjNF0v5DKOi4gA
 User Stories:
 
 https://docs.google.com/document/d/1fvLJtxxo9dLkup57L0MP9v-CrRjNhur6987a0Rk_v0s/edit
+
+
+Your initial admin user pass is EECE430_Project. Please change them.
+
+The following are your usernames:
+HusseinItawi
+MiraZaghbour
+MohamadAlhalabi
+CelineYoussef
+NadineRaad
