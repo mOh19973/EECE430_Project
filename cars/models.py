@@ -18,3 +18,6 @@ class CarModel(models.Model):
     Country = models.CharField(max_length=45)
     Mileage = models.CharField(max_length=40)
     Color = models.CharField(max_length=45)
+
+    def __str__(self):
+        return self.CarBrand + ' - ' + self.Model + ' ' + self.Year
