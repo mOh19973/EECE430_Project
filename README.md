@@ -19,8 +19,13 @@ https://docs.google.com/document/d/1fvLJtxxo9dLkup57L0MP9v-CrRjNhur6987a0Rk_v0s/
 Your initial admin user pass is EECE430_Project. Please change them.
 
 The following are your usernames:
+
 HusseinItawi
+
 MiraZaghbour
+
 MohamadAlhalabi
+
 CelineYoussef
+
 NadineRaad
