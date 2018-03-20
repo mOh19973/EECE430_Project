@@ -5,6 +5,7 @@ from django.conf.urls.static import static
 
 
 urlpatterns = [
-    url('admin/', admin.site.urls),
-    url(r'cars/', include('cars.urls'))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    # url(r'^$', include('cars.urls')),
+    url(r'^admin/', admin.site.urls),
+    url(r'^cars/', include('cars.urls'))
+]

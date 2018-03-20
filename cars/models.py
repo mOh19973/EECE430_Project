@@ -21,3 +21,6 @@ class CarModel(models.Model):
 
     def __str__(self):
         return self.CarBrand + ' - ' + self.Model + ' ' + self.Year
+
+    class Meta:
+        verbose_name_plural = "Car Models"

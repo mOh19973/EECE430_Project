@@ -1,9 +1,10 @@
-<h1>This is the index page for the car directory</h1>
+{% extends 'cars/exterior.html' %}
 
-<u1>
-    {% for car in all_cars %}
-    <li>
-        <a href="/cars/{{ car.id }}/"> {{car.Model}} </a>
-    </li>
-    {% endfor %}
-</u1>
+{% block content %}
+  <ul id="nav">
+    <li id="title">ZCR</li>
+    <li id="special"><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Location</a></li>
+  </ul>
+{% endblock %}
