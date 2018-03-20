@@ -6,7 +6,7 @@ from EECE430_Project import settings
 from . import views
 
 urlpatterns = [
-    # /music/
+    # /Default landing page
     url(r'^$', views.index, name='index'),
 
     # /music/712/
