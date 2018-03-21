@@ -7,4 +7,17 @@
     <li><a href="#">About</a></li>
     <li><a href="#">Location</a></li>
   </ul>
+<ul id="ads">
+    {% for car in all_cars %}
+    <li><a href="/cars/{{ car.id }}/"> {{car.Model}}</a></li>
+    {% endfor %}
+
+    
+</ul>
+
+
+
+
+
+
 {% endblock %}
