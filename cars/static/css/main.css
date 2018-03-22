@@ -13,10 +13,13 @@ body{
   height: 100vh;
 }
 
-#nav{
+.nav{
   color:#fbfbfb;
+  border-radius: 0;
 
 }
+
+
 
 ul{
   list-style:none;

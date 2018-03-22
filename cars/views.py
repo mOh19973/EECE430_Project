@@ -1,7 +1,5 @@
-from django.http import HttpResponse
 from cars.models import CarModel
-from django.shortcuts import render
-from django.http import Http404
+from django.shortcuts import render, get_object_or_404
 
 def index(request):
     all_cars = CarModel.objects.all()
@@ -9,8 +7,5 @@ def index(request):
 
 
 def detail(request, car_id):
-    try:
-        car = CarModel.objects.get(id=car_id)
-    except CarModel.DoesNotExist:
-        raise Http404("Car does not exist")
+    car = get_object_or_404(CarModel, id=car_id)
     return render(request, 'cars/detail.html', {'car': car})

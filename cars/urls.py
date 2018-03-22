@@ -5,6 +5,8 @@ from django.conf.urls.static import static
 from EECE430_Project import settings
 from . import views
 
+app_name = 'cars'
+
 urlpatterns = [
     # /Default landing page
     url(r'^$', views.index, name='index'),
