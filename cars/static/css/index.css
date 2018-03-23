@@ -1,11 +1,11 @@
-.navbar{
-    font-family: 'Satisfy', cursive;
+.navbar-brand{
+    font-family: 'Sofia';
 }
 
 .nav{
   color:#fbfbfb;
   border-radius: 0;
-
+  font-family: 'Sofia';
 }
 
 #menu{
