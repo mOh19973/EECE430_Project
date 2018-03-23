@@ -1,23 +1,69 @@
-{% extends 'cars/exterior.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Statisfy" rel="stylesheet" type="text/css">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css'%}"/>
+</head>
 
-{% block content %}
-  <ul id="nav">
-    <li id="title">ZCR</li>
-    <li id="special"><a href="#">Home</a></li>
-    <li><a href="#">About</a></li>
-    <li><a href="#">Location</a></li>
-  </ul>
-<ul id="ads">
-    {% for car in all_cars %}
-    <li><a href="/cars/{{ car.id }}/"> {{car.Model}}</a></li>
-    {% endfor %}
 
-    
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light navbar-inverse navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">ZCR</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                      <a class="nav-link" href="/cars/">Cars<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                          <a class="dropdown-item" href="#">Action</a>
+                          <a class="dropdown-item" href="#">Another action</a>
+                          <div class="dropdown-divider"></div>
+                          <a class="dropdown-item" href="#">Something else here</a>
+                      </div>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                  </li>
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+                  <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form>
+          </div>
+      </nav>
+
+  <!-- Car Cards -->
+  <ul id="menu">
+  {% for car in all_cars %}
+
+ <li>
+     <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{car.CarImg}}" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)" alt="{{car.Model}}">
+      <div class="card-body">
+          <h5 class="card-title">{{car.Model}}</h5>
+          <p class="card-text">{{car.Transmission}} </p>
+          <a href="/cars/{{car.id}}" class="btn btn-primary">Details</a>
+      </div>
+  </div>
+      </li>
+
+  {% endfor %}
 </ul>
+</body>
 
 
-
-
-
-
-{% endblock %}
+</html>

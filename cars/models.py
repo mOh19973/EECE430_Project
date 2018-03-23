@@ -2,6 +2,7 @@ from django.db import models
 
 
 class CarModel(models.Model):
+    CarImg = models.CharField(max_length=50000)
     CarBrand = models.CharField(max_length=45)
     Model = models.CharField(max_length=45)
     Year = models.CharField(max_length=40)
