@@ -19,3 +19,8 @@
     display:inline-block;
     margin: 30px;
 }
+
+.img-fluid{
+ width : 200 px;
+ height: 200 px;
+}
