@@ -11,7 +11,7 @@ urlpatterns = [
     # /Default landing page
     url(r'^$', views.index, name='index'),
 
-    # /music/712/
+    # /music/<car_id>/
     url(r'^(?P<car_id>[0-9]+)/$', views.detail,  name='search'),
 
 ]
