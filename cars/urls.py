@@ -9,24 +9,22 @@ app_name = 'cars'
 
 urlpatterns = [
     # /Default landing page
-    url(r'^$', views.index, name='index'),
-    url(r'^index', views.index, name='index'),
+    url(r'^$', views.IndexView.as_view(), name='index'),
+    url(r'^index', views.IndexView.as_view(), name='index'),
 
-    # /Car details/
-    url(r'^(?P<car_id>[0-9]+)/$', views.detail,  name='detail'),
+    # /cars/pk/
+    url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(),  name='detail'),
 
-    #Admin Login page
-    url(r'^login', views.login, name='admin_login'),
+    # /cars/model/add
+    url(r'model/add/$', views.CarCreate.as_view(), name='cars-add'),
 
-    #User Login page
-    url(r'^user_login', views.user_login, name='user_login'),
+    # /cars/model/pk
+    url(r'model/(?P<pk>[0-9]+)/$', views.CarUpdate.as_view(), name='cars-update'),
 
-    #admin area
-    url(r'^administrator', views.administrator, name='login'),
+    # /cars/model/pk/delete
+    url(r'model/(?P<pk>[0-9]+)/delete/$', views.CarDelete.as_view(), name='cars-delete'),
 
-    #user area
-    # url(r'^login', views.login, name='login'),
+    # /cars/register/
+    url(r'^register/$', views.UserFormView.as_view(), name='register'),
 
-    #logout
-    url(r'^logout', views.logout, name='logout'),
 ]

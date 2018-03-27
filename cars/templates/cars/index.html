@@ -1,8 +1,12 @@
 {% extends   'cars/exterior.html' %}
 {% load staticfiles %}
-
+{% block title%} Car Index {% endblock %}
 {% block content %}
 
+  <div class="card-body">
+    <a href="{% url 'cars:cars-add' %}" class="btn btn-primary btn-outline-secondary" style="position: absolute; TOP:100px; right:179px;" >Add a car</a>
+  </div>
+</div>
   <!-- Car Cards -->
   {% if 'customer_full_name' in request.session %}
       <p style="color: red;">You are now logged in.</p>
@@ -10,10 +14,8 @@
           <input type="submit" name="submit_logout" value="Logout">
       </form>
   {% endif %}
-
   <ul id="menu">
-
-  {% for car in all_cars %}
+  {% for car in carList %}
 
  <li>
      <div class="card" style="width: 18rem;">
@@ -21,7 +23,10 @@
       <div class="card-body">
           <h5 class="card-title">{{car}}</h5>
           <p class="card-text">{{car.Transmission}} </p>
+          <a class="btn btn-primary btn-info" href="{%url 'cars:cars-update' car.id%}" role="button">Edit</a>
           <a href="/cars/{{car.id}}" class="btn btn-primary">Details</a>
+          <a class="btn btn-primary btn-danger" href="{%url 'cars:cars-delete' car.id%}" role="button">Delete</a>
+
       </div>
   </div>
       </li>
