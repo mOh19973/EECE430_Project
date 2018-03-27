@@ -49,7 +49,7 @@ class UserFormView(View):
         return render(request, self.template_name, {'form': form})
 
     # process form data
-    def post(self,request):
+    def post(self, request):
         form = self.form_class(request.POST)
 
         if form.is_valid():
