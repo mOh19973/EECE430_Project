@@ -1,72 +1,104 @@
-from django.views import generic
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import CarModel
-from django.core.urlresolvers import reverse_lazy
-from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate,login
-from django.views.generic import View
-from .forms import UserForm
+from cars.models import *
+from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse
+from django.contrib.auth.hashers import *
+from django.shortcuts import redirect
+
+def index(request):
+    all_cars = CarModel.objects.all()
+    return render(request, 'cars/index.html', {'all_cars': all_cars})
 
 
-class IndexView(generic.ListView):
-    template_name = 'cars/index.html'
-    context_object_name = 'carList'
+def detail(request, car_id):
+    car = get_object_or_404(CarModel, id=car_id)
+    return render(request, 'cars/detail.html', {'car': car})
 
-    def get_queryset(self):
-        return CarModel.objects.all()
+def login(request):
+    # all_cars = CarModel.objects.all()
+    if 'logged_in' in request.session:
+        if 'admin' in request.session:
+            if request.session['admin'] == 'true':
+                return redirect('administrator.html')
+        else:
+                return render(request, 'cars/login.html')
+    else:
+        return render(request, 'cars/login.html')
 
+def logout(request):
+    request.session.clear()
+    return redirect( request.META.get('HTTP_REFERER') )
 
-class DetailView(generic.DetailView):
-    context_object_name = 'car'
-    model = CarModel
-    template_name = 'cars/detail.html'
-
-
-class CarCreate(CreateView):
-    model = CarModel
-    fields = ['CarImg', 'CarBrand', 'Model', 'Year', 'Engine','Cylinders','DoorsNum','Weight', 'Fuel', 'BodyType', 'Transmission',
-              'HP', 'TopSpeed', 'FuelCapacity','Country', 'Mileage', 'Color']
-
-
-class CarUpdate(UpdateView):
-    model = CarModel
-    fields = ['CarImg', 'CarBrand', 'Model', 'Year', 'Engine','Cylinders','DoorsNum','Weight', 'Fuel', 'BodyType', 'Transmission',
-              'HP', 'TopSpeed', 'FuelCapacity','Country', 'Mileage', 'Color']
+# def admin_actions(request):
 
 
-class CarDelete(DeleteView):
-    model = CarModel
-    success_url = reverse_lazy('cars:index')
+def user_login(request):
+    if 'logged_in' in request.session:
+        if request.session['customer'] == 'true':
+            return redirect('index.html')
+    else:
+
+        if 'username' in request.POST and 'password' in request.POST:
+            username = request.POST['username']
+            pwd = make_password(request.POST['password'])
+
+            try:
+                result = Customer.objects.get(username__exact=username)
+            except Customer.DoesNotExist:
+                result = None
+
+            if not result:
+                message = 'Wrong Username/Password'
+                return render(request, 'cars/user_login.html', {'error': message})
+            else:
+                password_check = check_password(request.POST['password'],result.password)
+                if password_check == False:
+                    message = 'Wrong Username/Password'
+                    return render(request, 'cars/user_login.html', {'error': message})
+                else:
+                    request.session['logged_in'] = 'true'
+                    request.session['customer'] = 'true'
+                    request.session['customer_full_name'] = result.full_name
+                    full_name = result.full_name
+                    # full_name = request.session['fav_color']
+                    return redirect('index.html')
+
+        else:
+            return render(request, 'cars/user_login.html')
 
 
-class UserFormView(View):
-    form_class = UserForm
-    template_name = 'cars/registrationform.html'
+def administrator(request):
 
-    # Display blank form
-    def get(self, request):
-        form = self.form_class(None)
-        return render(request, self.template_name, {'form': form})
+#  THIS IS THE LOGIN FOR ADMINS
+    if 'logged_in' in request.session:
+        if request.session['admin'] == 'true':
+            return render(request, 'cars/administrator.html', {'name': request.session['full_name']})
+    else:
 
-    # process form data
-    def post(self, request):
-        form = self.form_class(request.POST)
+        if 'username' in request.POST and 'password' in request.POST:
+            username = request.POST['username']
+            pwd = make_password(request.POST['password'])
 
-        if form.is_valid():
-            user = form.save(commit=False)
+            try:
+                result = Administrator.objects.get(username__exact=username)
+            except Administrator.DoesNotExist:
+                result = None
 
-            # Cleaned normalised data
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
-            user.set_password(password)
-            user.save()
+            if not result:
+                message = 'Wrong Username/Password'
+                return render(request, 'cars/login.html', {'error': message})
+            else:
+                password_check = check_password(request.POST['password'],result.password)
+                if password_check == False:
+                    message = 'Wrong Username/Password'
+                    return render(request, 'cars/login.html', {'error': message})
+                else:
+                    request.session['logged_in'] = 'true'
+                    request.session['admin'] = 'true'
+                    request.session['full_name'] = result.full_name
+                    full_name = result.full_name
+                    # full_name = request.session['fav_color']
+                    return render(request, 'cars/administrator.html', {'name': request.session['full_name']})
 
-            # returns user objects if credentials are correct
-            user = authenticate(username=username, password=password)
-
-            if user is not None:
-                if user.is_active:
-                    login(request, user)
-                    return redirect('cars:index')
-
-        return render(request, self.template_name, {'form': form})
+        else:
+            message = "Please login"
+            return redirect('login.html')

@@ -1,8 +1,8 @@
 from django.db import models
-from django.core.urlresolvers import reverse
+
 
 class CarModel(models.Model):
-    CarImg = models.FileField()
+    CarImg = models.CharField(max_length=50000)
     CarBrand = models.CharField(max_length=45)
     Model = models.CharField(max_length=45)
     Year = models.CharField(max_length=40)
@@ -20,8 +20,28 @@ class CarModel(models.Model):
     Mileage = models.CharField(max_length=40)
     Color = models.CharField(max_length=45)
 
-    def get_absolute_url(self):
-        return reverse('cars:detail', kwargs={'pk': self.pk})
-
     def __str__(self):
         return self.CarBrand + ' - ' + self.Model + ' ' + self.Year
+
+    class Meta:
+        verbose_name_plural = "Car Models"
+
+class Administrator(models.Model):
+    username = models.CharField(max_length=255)
+    password = models.CharField(max_length=255)
+    full_name= models.CharField(max_length=255)
+
+    def __str__(self):
+        return self.full_name
+
+
+class Customer(models.Model):
+    username = models.CharField(max_length=255)
+    password = models.CharField(max_length=255)
+    full_name= models.CharField(max_length=255)
+
+    # ADD ALL THE OTHER ATTRIBUTES
+
+
+    def __str__(self):
+        return self.full_name

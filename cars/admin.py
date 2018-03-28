@@ -3,3 +3,5 @@ from .models import *
 
 # Register your models here.
 admin.site.register(CarModel)
+admin.site.register(Administrator)
+admin.site.register(Customer)
