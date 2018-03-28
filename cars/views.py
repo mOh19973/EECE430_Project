@@ -1,4 +1,5 @@
 from cars.models import *
+from django.contrib.auth.models import User
 from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.contrib.auth.hashers import *
@@ -79,8 +80,8 @@ def administrator(request):
             pwd = make_password(request.POST['password'])
 
             try:
-                result = Administrator.objects.get(username__exact=username)
-            except Administrator.DoesNotExist:
+                result = User.objects.get(username__exact=username)
+            except User.DoesNotExist:
                 result = None
 
             if not result:
@@ -94,8 +95,8 @@ def administrator(request):
                 else:
                     request.session['logged_in'] = 'true'
                     request.session['admin'] = 'true'
-                    request.session['full_name'] = result.full_name
-                    full_name = result.full_name
+                    request.session['full_name'] = result.first_name + " " + result.last_name
+                    full_name = result.first_name + " " + result.last_name
                     # full_name = request.session['fav_color']
                     return render(request, 'cars/administrator.html', {'name': request.session['full_name']})
 

@@ -26,13 +26,13 @@ class CarModel(models.Model):
     class Meta:
         verbose_name_plural = "Car Models"
 
-class Administrator(models.Model):
-    username = models.CharField(max_length=255)
-    password = models.CharField(max_length=255)
-    full_name= models.CharField(max_length=255)
+#class Administrator(models.Model):
+#    username = models.CharField(max_length=255)
+#    password = models.CharField(max_length=255)
+#    full_name= models.CharField(max_length=255)
 
-    def __str__(self):
-        return self.full_name
+#    def __str__(self):
+#        return self.full_name
 
 
 class Customer(models.Model):
