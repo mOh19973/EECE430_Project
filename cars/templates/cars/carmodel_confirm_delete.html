@@ -1,0 +1,10 @@
+{% extends   'cars/exterior.html' %}
+{% load staticfiles %}
+{%  block title %} Car Remove {%  endblock %}
+
+{% block content %}
+    <div class="alert alert-danger" role="alert">
+  Car has been successfully removed!
+</div>
+    <a class="btn btn-outline-secondary" href="{% url 'cars:index' %}" role="button">Back to Index</a>
+{% endblock %}
