@@ -1,8 +1,5 @@
-
 from django.conf.urls import url
-from django.conf.urls.static import static
-
-from EECE430_Project import settings
+from django.contrib.auth import views as auth_views
 from . import views
 
 app_name = 'cars'
@@ -11,7 +8,6 @@ urlpatterns = [
     # /Default landing page
     url(r'^$', views.IndexView.as_view(), name='index'),
     url(r'^index$', views.IndexView.as_view(), name='index'),
-
     # /cars/pk/
     url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(),  name='detail'),
 
@@ -27,4 +23,9 @@ urlpatterns = [
     # /cars/register/
     url(r'^register/$', views.UserFormView.as_view(), name='register'),
 
+    # /cars/login
+    url(r'^login', auth_views.login, {'template_name': 'cars/login.html'}, name='login'),
+
+    # /cars/logout
+    url(r'^logout', auth_views.logout, name='logout'),
 ]

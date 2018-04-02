@@ -1,15 +1,16 @@
+from django.http import HttpResponse
 from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import CarModel
 from django.urls import reverse_lazy
 from django.shortcuts import render, redirect
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate, login
 from django.views.generic import View
 from .forms import UserForm
 
 
 class IndexView(generic.ListView):
-    template_name = 'cars/index.html'
+    template_name = 'cars/default_index.html'
     context_object_name = 'carList'
 
     def get_queryset(self):
@@ -20,6 +21,12 @@ class DetailView(generic.DetailView):
     context_object_name = 'car'
     model = CarModel
     template_name = 'cars/detail.html'
+
+
+class UserView(generic.DetailView):
+    context_object_name = 'user'
+    model = UserForm
+    template_name = 'cars/user_profile.html'
 
 
 class CarCreate(CreateView):
@@ -67,6 +74,6 @@ class UserFormView(View):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return redirect('cars:index')
+                    return redirect('cars/admin_index.html')
 
         return render(request, self.template_name, {'form': form})

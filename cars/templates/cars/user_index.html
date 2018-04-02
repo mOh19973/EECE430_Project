@@ -1,0 +1,6 @@
+{% extends   'cars/index.html' %}
+{% load staticfiles %}
+
+{% block user %}
+    <a class="nav-item nav-link" href="#}" style="color: white; ">Welcome, {{ UserForm.username }}</a>
+{% endblock %}

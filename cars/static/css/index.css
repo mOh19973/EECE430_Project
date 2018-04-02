@@ -1,11 +1,11 @@
 .navbar-brand{
-    font-family: 'Sofia';
+    font-family: 'Sofia', sans-serif;
 }
 
 .nav{
   color:#fbfbfb;
   border-radius: 0;
-  font-family: 'Sofia';
+  font-family: 'Sofia' , sans-serif;
 }
 
 #menu{
@@ -20,7 +20,7 @@
     margin: 30px;
 }
 
-.img-fluid{
- width : 200 px;
- height: 200 px;
+.img-fluid {
+    width: 200px;
+    height: 200px;
 }
