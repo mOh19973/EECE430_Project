@@ -24,8 +24,11 @@ urlpatterns = [
     url(r'^register/$', views.UserFormView.as_view(), name='register'),
 
     # /cars/login
-    url(r'^login', auth_views.login, {'template_name': 'cars/login.html'}, name='login'),
+    url(r'^login/$', auth_views.login, {'template_name': 'cars/login.html'}, name='login'),
 
     # /cars/logout
-    url(r'^logout', auth_views.logout, {'next_page': '/'}, name='logout'),
+    url(r'^logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
+
+    # /cars/profile/
+    url(r'^profile/$', views.AdminIndexView.as_view(), name='profile'),
 ]

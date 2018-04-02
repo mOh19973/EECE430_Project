@@ -50,7 +50,7 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'EECE430_Project.urls'
-LOGIN_REDIRECT_URL = '/cars/login'
+LOGIN_REDIRECT_URL = '/cars/profile/'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',

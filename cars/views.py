@@ -22,12 +22,12 @@ class DetailView(generic.DetailView):
     model = CarModel
     template_name = 'cars/detail.html'
 
+class AdminIndexView(generic.ListView):
+    template_name = 'cars/admin_index.html'
+    context_object_name = 'carList'
 
-class UserView(generic.DetailView):
-    context_object_name = 'user'
-    model = UserForm
-    template_name = 'cars/user_profile.html'
-
+    def get_queryset(self):
+        return CarModel.objects.all()
 
 class CarCreate(CreateView):
     model = CarModel
@@ -74,6 +74,6 @@ class UserFormView(View):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return redirect('cars/admin_index.html')
+                    return redirect('cars/default_index.html')
 
         return render(request, self.template_name, {'form': form})
