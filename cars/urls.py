@@ -27,5 +27,5 @@ urlpatterns = [
     url(r'^login', auth_views.login, {'template_name': 'cars/login.html'}, name='login'),
 
     # /cars/logout
-    url(r'^logout', auth_views.logout, name='logout'),
+    url(r'^logout', auth_views.logout, {'next_page': '/'}, name='logout'),
 ]
