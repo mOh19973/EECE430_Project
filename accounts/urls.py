@@ -17,6 +17,6 @@ urlpatterns = [
     url(r'^logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
 
     # /accounts/profile/
-    # url(r'^profile/$', views.AdminIndexView.as_view(), name='profile'),
+    url(r'^profile/(?P<username>[a-zA-Z0-9]+)$', views.get_user_profile, name='profile'),
 
 ]

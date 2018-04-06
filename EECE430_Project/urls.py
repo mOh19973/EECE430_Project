@@ -10,6 +10,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^cars/', include('cars.urls'), name='car'),
     url(r'^accounts/', include('accounts.urls'), name='accounts'),
+    url(r'^account/$', views.account_redirect, name='account-redirect'),
 ]
 
 if settings.DEBUG:

@@ -1,4 +1,5 @@
 from django.contrib.auth import authenticate, login
+from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.views import generic, View
 from .forms import UserForm
@@ -10,6 +11,11 @@ class IndexView(generic.ListView):
 
     def get_queryset(self):
         return UserForm.objects.all()
+
+
+def get_user_profile(request, username):
+    user = User.objects.get(username=username)
+    return render(request, 'accounts/user_profile.html', {"user": user})
 
 
 class UserFormView(View):
