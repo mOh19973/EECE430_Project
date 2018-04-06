@@ -3,11 +3,10 @@ from django.conf.urls import url, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-app_name = 'cars'
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^cars/', include('cars.urls'), name='car'),
+    url(r'^accounts/', include('accounts.urls'), name='accounts'),
 ]
 
 if settings.DEBUG:
