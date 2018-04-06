@@ -20,13 +20,4 @@ urlpatterns = [
 
     # /cars/model/pk/delete/
     url(r'^model/(?P<pk>[0-9]+)/delete/$', views.CarDelete.as_view(), name='cars-delete'),
-
-    # /accounts/login
-    url(r'^login/$', auth_views.login, {'template_name': 'cars/login.html'}, name='login'),
-
-    # /accounts/logout
-    url(r'^logout/$', auth_views.logout, {'next_page': '/'}, name='logout'),
-
-    # /accounts/register/
-    url(r'^register/$', views.UserFormView.as_view(), name='register'),
 ]

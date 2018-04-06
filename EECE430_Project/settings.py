@@ -24,8 +24,7 @@ SECRET_KEY = 'k5s8aoxa#yi7wvq%$i8=#sk6wwgtlfgznd8!x_^yuc#xhwnhi1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -55,7 +54,7 @@ LOGIN_REDIRECT_URL = '/accounts/profile/'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
