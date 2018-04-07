@@ -20,3 +20,7 @@
 {% block edit %}
     <a class="btn btn-primary btn-info" href="{%url 'cars:cars-update' car.id%}" role="button">Edit</a>
 {% endblock %}
+
+{% block details %}
+    <a href="{% url 'cars:user_detail' user.username car.id %}" class="btn btn-primary">Details</a>
+{% endblock %}

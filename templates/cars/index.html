@@ -15,7 +15,7 @@
           <h5 class="card-title">{{car}}</h5>
           <p class="card-text">{{car.Transmission}} </p>
           {% block edit %}{% endblock %}
-          <a href="{% url 'cars:detail' pk=car.id %}" class="btn btn-primary">Details</a>
+          {% block details %} <a href="{% url 'cars:detail' car.id %}" class="btn btn-primary">Details</a>{% endblock %}
           {% block delete %} {% endblock %}
 
       </div>

@@ -16,6 +16,9 @@ urlpatterns = [
     # /cars/pk/
     url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(),  name='detail'),
 
+    # /cars/username/pk/
+    url(r'^(?P<username>[a-zA-Z0-9]+)/(?P<pk>[0-9]+)/$', views.go_to_user_index,  name='user_detail'),
+
     # /cars/model/add
     url(r'^model/add/$', views.CarCreate.as_view(), name='cars-add'),
 

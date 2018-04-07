@@ -6,7 +6,7 @@
 
     <!-- Jumbotron-->
     <div class="jumbotron">
-        <a class="btn btn-outline-dark" href="/cars" role="button">Back</a>
+    <a class="btn btn-outline-dark" href="{% url 'cars:index' %}" role="button">Back</a>
            <h3> </h3>
         <h1 class="display-4">  <img src="{{car.CarImg.url}}" style="width: 300px;" alt="{{car.Model}}"> {{ car}} </h1>
         <hr class="my-4">

@@ -41,3 +41,9 @@ def go_to_user(request, username):
     user = User.objects.get(username=username)
     carList = CarModel.objects.all()
     return render(request, 'cars/admin_index.html', {"user": user, "carList": carList})
+
+
+def go_to_user_index(request, username, pk):
+    user = User.objects.get(username=username)
+    car = CarModel.objects.get(pk=pk)
+    return render(request, 'cars/user_detail.html', {"user": user, "car": car, "pk": pk})
