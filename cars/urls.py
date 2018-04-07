@@ -1,6 +1,4 @@
 from django.conf.urls import url
-from django.contrib.auth import views as auth_views
-
 from . import views
 
 app_name = 'cars'
@@ -8,7 +6,13 @@ app_name = 'cars'
 urlpatterns = [
     # /Default landing page
     url(r'^$', views.IndexView.as_view(), name='index'),
+
+    # /cars/index/
     url(r'^index$', views.IndexView.as_view(), name='index'),
+
+    # /cars/username
+    url(r'^(?P<username>[a-zA-Z0-9]+)$', views.go_to_user, name='user_index'),
+
     # /cars/pk/
     url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(),  name='detail'),
 

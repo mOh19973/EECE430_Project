@@ -1,0 +1,14 @@
+{% extends   'cars/admin_index.html' %}
+{% load staticfiles %}
+
+{% block user %}
+    <a class="nav-item nav-link" href="{% url 'accounts:profile' username=user.username %}" style="color: white; ">Welcome, {{ user.first_name }}</a>
+{% endblock %}
+
+{% block cars %}
+    {% url 'cars:user_index' username=user.username %}
+{% endblock %}
+
+{% block logout %}
+     <a class="nav-item nav-link" href="{% url 'accounts:logout' %}" style="color: white; ">Logout</a>
+{% endblock %}

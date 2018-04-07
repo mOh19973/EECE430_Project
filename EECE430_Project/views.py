@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 
 
 def homepage(request):
-    return render(request, 'cars/homepage.html')
+    return render(request, 'homepage.html')
 
 
 def account_redirect(request):

@@ -46,6 +46,6 @@ class UserFormView(View):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return redirect('cars/default_index.html')
+                    return redirect('cars:index')
 
         return render(request, self.template_name, {'form': form})

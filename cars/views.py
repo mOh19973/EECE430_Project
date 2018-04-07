@@ -1,14 +1,13 @@
+from django.contrib.auth.models import User
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import CarModel
 from django.urls import reverse_lazy
-from django.contrib.auth import authenticate, login
-from django.shortcuts import render, redirect
-from django.views import generic, View
-from .forms import UserForm
+from django.shortcuts import render
+from django.views import generic
 
 
 class IndexView(generic.ListView):
-    template_name = 'cars/default_index.html'
+    template_name = 'cars/index.html'
     context_object_name = 'carList'
 
     def get_queryset(self):
@@ -38,3 +37,7 @@ class CarDelete(DeleteView):
     success_url = reverse_lazy('cars:index')
 
 
+def go_to_user(request, username):
+    user = User.objects.get(username=username)
+    carList = CarModel.objects.all()
+    return render(request, 'cars/admin_index.html', {"user": user, "carList": carList})
