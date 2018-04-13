@@ -9,6 +9,7 @@ from django.views import generic
 class IndexView(generic.ListView):
     template_name = 'cars/index.html'
     context_object_name = 'carList'
+    user = User
 
     def get_queryset(self):
         return CarModel.objects.all()
@@ -40,7 +41,7 @@ class CarDelete(DeleteView):
 def go_to_user(request, username):
     user = User.objects.get(username=username)
     carList = CarModel.objects.all()
-    return render(request, 'cars/admin_index.html', {"user": user, "carList": carList})
+    return render(request, 'cars/index.html', {"user": user, "carList": carList})
 
 
 def go_to_user_index(request, username, pk):

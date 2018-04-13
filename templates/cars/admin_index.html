@@ -1,4 +1,5 @@
 {% extends   'cars/index.html' %}
+{% if user.is_authenticated %}
 {% load staticfiles %}
 {% block homebutton %}/cars/profile{% endblock %}
 {% block user %}
@@ -24,3 +25,4 @@
 {% block details %}
     <a href="{% url 'cars:user_detail' user.username car.id %}" class="btn btn-primary">Details</a>
 {% endblock %}
+{% endif %}

@@ -1,12 +1,2 @@
 {% extends   'exterior.html' %}
 {% load staticfiles %}
-
-
-{% block user %}
-    <a class="nav-item nav-link" href="{% url 'accounts:login' %}" style="color: white; ">Login</a>
-    <a class="nav-item nav-link" href="{% url 'accounts:register' %}" style="color:white;">Register</a>
-{% endblock %}
-
-{% block cars %}
-    {% url 'cars:index'%}
-{% endblock %}
