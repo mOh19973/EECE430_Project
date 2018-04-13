@@ -38,13 +38,6 @@ class CarDelete(DeleteView):
     success_url = reverse_lazy('cars:index')
 
 
-def go_to_user(request, username):
-    user = User.objects.get(username=username)
-    carList = CarModel.objects.all()
-    return render(request, 'cars/index.html', {"user": user, "carList": carList})
 
 
-def go_to_user_index(request, username, pk):
-    user = User.objects.get(username=username)
-    car = CarModel.objects.get(pk=pk)
-    return render(request, 'cars/user_detail.html', {"user": user, "car": car, "pk": pk})
+
