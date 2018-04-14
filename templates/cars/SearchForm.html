@@ -8,16 +8,16 @@
         <div class="row">
             <div class="col-sm-12 col-md-7">
                 <div class="panel-body">
-                    <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
+                    <form class="form-horizontal" action="{% url 'cars:search' %}" method="get">
                         {% csrf_token %}
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Brand Name</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="CarBrand">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.CarBrand }}</option>
+                                    <option value="{{ car.CarBrand }}">{{ car.CarBrand }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -25,10 +25,10 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Model Name</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="Model">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.Model }}</option>
+                                    <option value="{{ car.Model }}">{{ car.Model }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -36,7 +36,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Year of Manufacture</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="Year">
                                 <option selected>All</option>
                                 {% for car in ordered %}
                                     <option value="{{ car.Year }}">{{ car.Year }}</option>
@@ -45,12 +45,12 @@
                         </div>
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Engine</label>
+                                <label class="input-group-text" for="inputGroupSelect01" >Engine</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="Engine">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.Engine }}</option>
+                                    <option value="{{ car.Engine }}">{{ car.Engine }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -58,10 +58,10 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Number of Cylinders</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="Cylinders">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.Cylinders }}</option>
+                                    <option value="{{ car.Cylinders }}">{{ car.Cylinders }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -72,7 +72,7 @@
                             <select class="custom-select" id="inputGroupSelect01">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.DoorsNum }}</option>
+                                    <option value="{{ car.DoorsNum }}">{{ car.DoorsNum }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -83,7 +83,7 @@
                             <select class="custom-select" id="inputGroupSelect01">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.Weight }}</option>
+                                    <option value="{{ car.Weight }}">{{ car.Weight }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -94,7 +94,7 @@
                             <select class="custom-select" id="inputGroupSelect01">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.Fuel }}</option>
+                                    <option value="{{ car.Fuel }}">{{ car.Fuel }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -105,7 +105,7 @@
                             <select class="custom-select" id="inputGroupSelect01">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.BodyType }}</option>
+                                    <option value="{{ car.BodyType }}">{{ car.BodyType }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -116,7 +116,7 @@
                             <select class="custom-select" id="inputGroupSelect01">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.Transmission }}</option>
+                                    <option value="{{ car.Transmission }}">{{ car.Transmission }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -127,7 +127,7 @@
                             <select class="custom-select" id="inputGroupSelect01">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.HP }}</option>
+                                    <option value="{{ car.HP }}">{{ car.HP }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -138,7 +138,7 @@
                             <select class="custom-select" id="inputGroupSelect01">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.TopSpeed }}</option>
+                                    <option value="{{ car.TopSpeed }}">{{ car.TopSpeed }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -149,7 +149,7 @@
                             <select class="custom-select" id="inputGroupSelect01">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.FuelCapacity }}</option>
+                                    <option value="{{ car.FuelCapacity }}">{{ car.FuelCapacity }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -160,7 +160,7 @@
                             <select class="custom-select" id="inputGroupSelect01">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.Country }}</option>
+                                    <option value="{{ car.Country }}">{{ car.Country }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -171,7 +171,7 @@
                             <select class="custom-select" id="inputGroupSelect01">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.Mileage }}</option>
+                                    <option value="{{ car.Mileage }}">{{ car.Mileage }}</option>
                                 {% endfor %}
                             </select>
                         </div>
@@ -182,13 +182,13 @@
                             <select class="custom-select" id="inputGroupSelect01">
                                 <option selected>All</option>
                                 {% for car in carList %}
-                                    <option value="{{ car.pk }}">{{ car.Color }}</option>
+                                    <option value="{{ car.Color }}">{{ car.Color }}</option>
                                 {% endfor %}
                             </select>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-sucess">Submit</button>
+                                <button type="submit" class="btn btn-success">Submit</button>
                             </div>
                         </div>
                     </form>

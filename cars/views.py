@@ -46,16 +46,5 @@ class Search(View):
     def get(self, request):
         carList = CarModel.objects.all()
         form = self.form_class(None)
-        # ___________________________________distinct query does not work in sqlite
-        # ordered = CarModel.objects.distinct('Year').order_by('Year').all()
-        ordered = CarModel.objects.order_by('Year').all()
+        ordered = CarModel.objects.values('Year').distinct().order_by('Year').all()
         return render(request, self.template_name, {'form': form, 'carList': carList, 'ordered': ordered})
-
-    # process form data
-    def post(self, request):
-        carList = CarModel.objects.all()
-        form = self.form_class(request.POST)
-        # ___________________________________distinct query does not work in sqlite
-        # ordered = CarModel.objects.distinct('Year').order_by('Year').all()
-        ordered = CarModel.objects.order_by('Year').all()
-        return render(request, self.template_name, {'form': form, 'carList': carList, 'ordered':ordered})
