@@ -38,6 +38,15 @@ class CarDelete(DeleteView):
     success_url = reverse_lazy('cars:index')
 
 
+def search(request):
+        # Your code
+        if request.method == 'GET':  # If the form is submitted
+
+            search_query = request.GET.get('search_box', None)
+            # Do whatever you need with the word the user looked for
+
+        # Your code
+
 
 
 

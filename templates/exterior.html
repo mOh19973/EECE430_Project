@@ -29,7 +29,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="{% url 'cars:index'%}">Cars</a>
+                    <a class="nav-link" style="color: rgb(255, 255, 255);" href="{% url 'cars:index'%}">Cars</a>
                  </li>
             </ul>
             {% block login %}{% endblock %}
@@ -37,8 +37,7 @@
 
 
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit" disabled >Search</button>
+                <a class="btn btn-outline-success my-2 my-sm-0" href="{% url 'cars:search' %}">Search</a>
 
                 <div class="form-inline my-2 my-lg-0">
             </div>
