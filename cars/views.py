@@ -25,14 +25,12 @@ class DetailView(generic.DetailView):
 
 class CarCreate(CreateView):
     model = CarModel
-    fields = ['CarImg', 'CarBrand', 'Model', 'Year', 'Engine','Cylinders', 'DoorsNum','Weight', 'Fuel', 'BodyType', 'Transmission',
-              'HP', 'TopSpeed', 'FuelCapacity','Country', 'Mileage', 'Color']
+    fields = '__all__'
 
 
 class CarUpdate(UpdateView):
     model = CarModel
-    fields = ['CarImg', 'CarBrand', 'Model', 'Year', 'Engine','Cylinders','DoorsNum','Weight', 'Fuel', 'BodyType', 'Transmission',
-              'HP', 'TopSpeed', 'FuelCapacity','Country', 'Mileage', 'Color']
+    fields = '__all__'
 
 
 class CarDelete(DeleteView):
