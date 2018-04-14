@@ -1,9 +1,11 @@
 from django.contrib.auth.models import User
+from django.shortcuts import render
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from .models import CarModel
 from django.urls import reverse_lazy
-from django.shortcuts import render
+from django.views import View
 from django.views import generic
+from .forms import CarModelForm
 
 
 class IndexView(generic.ListView):
@@ -23,7 +25,7 @@ class DetailView(generic.DetailView):
 
 class CarCreate(CreateView):
     model = CarModel
-    fields = ['CarImg', 'CarBrand', 'Model', 'Year', 'Engine','Cylinders','DoorsNum','Weight', 'Fuel', 'BodyType', 'Transmission',
+    fields = ['CarImg', 'CarBrand', 'Model', 'Year', 'Engine','Cylinders', 'DoorsNum','Weight', 'Fuel', 'BodyType', 'Transmission',
               'HP', 'TopSpeed', 'FuelCapacity','Country', 'Mileage', 'Color']
 
 
@@ -38,15 +40,24 @@ class CarDelete(DeleteView):
     success_url = reverse_lazy('cars:index')
 
 
-def search(request):
-        # Your code
-        if request.method == 'GET':  # If the form is submitted
+class Search(View):
+    form_class = CarModelForm
+    template_name = 'cars/SearchForm.html'
 
-            search_query = request.GET.get('search_box', None)
-            # Do whatever you need with the word the user looked for
+    # Display blank form
+    def get(self, request):
+        carList = CarModel.objects.all()
+        form = self.form_class(None)
+        # ___________________________________distinct query does not work in sqlite
+        # ordered = CarModel.objects.distinct('Year').order_by('Year').all()
+        ordered = CarModel.objects.order_by('Year').all()
+        return render(request, self.template_name, {'form': form, 'carList': carList, 'ordered': ordered})
 
-        # Your code
-
-
-
-
+    # process form data
+    def post(self, request):
+        carList = CarModel.objects.all()
+        form = self.form_class(request.POST)
+        # ___________________________________distinct query does not work in sqlite
+        # ordered = CarModel.objects.distinct('Year').order_by('Year').all()
+        ordered = CarModel.objects.order_by('Year').all()
+        return render(request, self.template_name, {'form': form, 'carList': carList, 'ordered':ordered})
