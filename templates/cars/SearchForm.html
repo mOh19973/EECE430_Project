@@ -2,207 +2,248 @@
 {% block title %} Search {% endblock %}
 
 {% block content %}
-    <h1></h1>
-    <h1 style="margin-top: 15px; margin-left: 15px">Search cars</h1>
-
-
-        <ul>{% for stud in searchedItem %}
-            <li>
-
-            {{ stud }}
-
-            </li>{% endfor %}
-        </ul>
-    <div class="container-fluid" style="margin-top: 25px" >
-        <div class="row">
-            <div class="col-sm-12 col-md-7">
-                <div class="panel-body">
-                    <form class="form-horizontal" action="" method="get">
-                        {% csrf_token %}
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Brand Name</label>
+    <div class="jumbotron">
+        <h1 class="display-5">Search cars</h1>
+        <hr class="my-4">
+        <div class="col-sm-12 col-md-7">
+            <div class="panel-body">
+                <form action="" method="get">
+                    {% csrf_token %}
+                    <div class="form-row align-items-center">
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Brand Name</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="CarBrand">
+                                    <option selected>All</option>
+                                    {% for car in orderedByBrand %}
+                                        <option value="{{ car.CarBrand }}">{{ car.CarBrand }}</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="CarBrand">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.CarBrand }}">{{ car.CarBrand }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Model Name</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Model Name</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="Model">
+                                    <option selected>All</option>
+                                    {% for car in orderedByModel %}
+                                        <option value="{{ car.Model }}">{{ car.Model }}</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="Model">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.Model }}">{{ car.Model }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Year of Manufacture</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Year of Manufacture</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="Year">
+                                    <option selected>All</option>
+                                    {% for car in orderedByYear %}
+                                        <option value="{{ car.Year }}">{{ car.Year }}</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="Year">
-                                <option selected>All</option>
-                                {% for car in ordered %}
-                                    <option value="{{ car.Year }}">{{ car.Year }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01" >Engine</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Engine</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="Engine">
+                                    <option selected>All</option>
+                                    {% for car in orderedByEngine %}
+                                        <option value="{{ car.Engine }}">{{ car.Engine }} L</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="Engine">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.Engine }}">{{ car.Engine }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Number of Cylinders</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Number of Cylinders</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="Cylinders">
+                                    <option selected>All</option>
+                                    {% for car in orderedByCylinders %}
+                                        <option value="{{ car.Cylinders }}">{{ car.Cylinders }} L</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="Cylinders">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.Cylinders }}">{{ car.Cylinders }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Number of Doors</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Number of Doors</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="DoorsNum">
+                                    <option selected>All</option>
+                                    {% for car in orderedByDoors %}
+                                        <option value="{{ car.DoorsNum }}">{{ car.DoorsNum }}</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="DoorsNum">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.DoorsNum }}">{{ car.DoorsNum }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Weight</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Weight</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="Weight">
+                                    <option selected>All</option>
+                                    {% for car in orderedByWeight %}
+                                        <option value="{{ car.Weight }}">{{ car.Weight }} kg</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="Weight">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.Weight }}">{{ car.Weight }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Fuel Type</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Fuel Type</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="Fuel">
+                                    <option selected>All</option>
+                                    {% for car in orderedByFuel %}
+                                        <option value="{{ car.Fuel }}">{{ car.Fuel }}</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="Fuel">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.Fuel }}">{{ car.Fuel }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Body Type</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Body Type</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="BodyType">
+                                    <option selected>All</option>
+                                    {% for car in orderedByBody %}
+                                        <option value="{{ car.BodyType }}">{{ car.BodyType }}</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="BodyType">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.BodyType }}">{{ car.BodyType }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Transmission Type</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Transmission Type</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="Transmission">
+                                    <option selected>All</option>
+                                    {% for car in orderedByTrans %}
+                                        <option value="{{ car.Transmission }}">{{ car.Transmission }}</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="Transmission">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.Transmission }}">{{ car.Transmission }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Horsepower</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Horsepower</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="HP">
+                                    <option selected>All</option>
+                                    {% for car in orderedByHP %}
+                                        <option value="{{ car.HP }}">{{ car.HP }}</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="HP">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.HP }}">{{ car.HP }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Top Speed</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Top Speed</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="TopSpeed">
+                                    <option selected>All</option>
+                                    {% for car in orderedBySpeed %}
+                                        <option value="{{ car.TopSpeed }}">{{ car.TopSpeed }} km/h</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="TopSpeed">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.TopSpeed }}">{{ car.TopSpeed }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Fuel Capacity</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Fuel Capacity</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="FuelCapacity">
+                                    <option selected>All</option>
+                                    {% for car in orderedByCap %}
+                                        <option value="{{ car.FuelCapacity }}">{{ car.FuelCapacity }} L</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="FuelCapacity">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.FuelCapacity }}">{{ car.FuelCapacity }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Country of Manufacture</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Country of Manufacture</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="Country">
+                                    <option selected>All</option>
+                                    {% for car in orderedByCountry %}
+                                        <option value="{{ car.Country }}">{{ car.Country }}</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="Country">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.Country }}">{{ car.Country }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Mileage</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Mileage</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="Mileage">
+                                    <option selected>All</option>
+                                    {% for car in orderedByMile %}
+                                        <option value="{{ car.Mileage }}">{{ car.Mileage }} km</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="Mileage">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.Mileage }}">{{ car.Mileage }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Color</label>
+                        <div class="col-auto">
+                            <div class="input-group mb-2">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01">Color</label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01" name="Color">
+                                    <option selected>All</option>
+                                    {% for car in orderedByColor %}
+                                        <option value="{{ car.Color }}">{{ car.Color }}</option>
+                                    {% endfor %}
+                                </select>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="Color">
-                                <option selected>All</option>
-                                {% for car in carList %}
-                                    <option value="{{ car.Color }}">{{ car.Color }}</option>
-                                {% endfor %}
-                            </select>
                         </div>
                         <div class="form-group">
                             <div class="col-sm-offset-2 col-sm-10">
                                 <button type="submit" class="btn btn-success">Submit</button>
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
+
+
+
+    <!-- Car Cars -->
+    <ul id="menu">
+        {% for car in searchedItem %}
+            <li>
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="{{car.CarImg.url}}" alt="{{car.Model}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{car}}</h5>
+                        <p class="card-text">{{car.Transmission}} </p>
+                        <a href="{% url 'cars:detail' car.id %}" class="btn btn-primary">Details</a>
+                    </div>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}

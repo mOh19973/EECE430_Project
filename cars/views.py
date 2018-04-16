@@ -44,12 +44,70 @@ class Search(View):
 
     # Display blank form
     def get(self, request):
+        carspecs =['CarBrand', 'Model', 'Year', 'Engine', 'Cylinders', 'DoorsNum',
+                   'Weight', 'Fuel', 'BodyType', 'Transmission', 'HP', 'TopSpeed',
+                   'FuelCapacity', 'Country', 'Mileage', 'Color']
         searchedItem = CarModel.objects.all()
         carList = CarModel.objects.all()
         form = self.form_class(request.GET)
-        ordered = CarModel.objects.values('Year').distinct().order_by('Year').all()
+
+        orderedByBrand = CarModel.objects.values('CarBrand').distinct().order_by('CarBrand').all()
+        orderedByModel = CarModel.objects.values('Model').distinct().order_by('Model').all()
+        orderedByYear = CarModel.objects.values('Year').distinct().order_by('Year').all()
+        orderedByEngine = CarModel.objects.values('Engine').distinct().order_by('Engine').all()
+        orderedByCylinders = CarModel.objects.values('Cylinders').distinct().order_by('Cylinders').all()
+        orderedByDoors = CarModel.objects.values('DoorsNum').distinct().order_by('DoorsNum').all()
+        orderedByWeight = CarModel.objects.values('Weight').distinct().order_by('Weight').all()
+        orderedByFuel = CarModel.objects.values('Fuel').distinct().order_by('Fuel').all()
+        orderedByBody = CarModel.objects.values('BodyType').distinct().order_by('BodyType').all()
+        orderedByTrans = CarModel.objects.values('Transmission').distinct().order_by('Transmission').all()
+        orderedByHP = CarModel.objects.values('HP').distinct().order_by('HP').all()
+        orderedBySpeed = CarModel.objects.values('TopSpeed').distinct().order_by('TopSpeed').all()
+        orderedByCap = CarModel.objects.values('FuelCapacity').distinct().order_by('FuelCapacity').all()
+        orderedByCountry = CarModel.objects.values('Country').distinct().order_by('Country').all()
+        orderedByMile = CarModel.objects.values('Mileage').distinct().order_by('Mileage').all()
+        orderedByColor = CarModel.objects.values('Color').distinct().order_by('Color').all()
+
         year = request.GET.get("Year")
+        carBrand = request.GET.get("CarBrand")
+        model = request.GET.get("Model")
+        engine = request.GET.get("Engine")
+        cylinders = request.GET.get("Cylinders")
+        doors = request.GET.get("DoorsNum")
+        weight = request.GET.get("Weight")
+        fuel = request.GET.get("Fuel")
+        bodytype = request.GET.get("BodyType")
+        transmission = request.GET.get("Transmission")
+        hp = request.GET.get("HP")
+        speed = request.GET.get("TopSpeed")
+        cap = request.GET.get("FuelCapacity")
+        country = request.GET.get("Country")
+        mile = request.GET.get("Mileage")
+        color = request.GET.get("Color")
+
         if form.is_valid():
-            searchedItem = CarModel.objects.filter(Year=year)
-        return render(request, self.template_name, {'form': form, 'carList': carList, 'ordered': ordered,
+            for i in carspecs:
+                if not request.GET.get(i) == "All":
+                    searchedItem = CarModel.objects.filter(CarBrand=carBrand, Model=model, Year=year, Engine=engine,
+                                                           Cylinders=cylinders, DoorsNum=doors, Weight=weight,
+                                                           Fuel=fuel, BodyType=bodytype, Transmission=transmission,
+                                                           HP=hp, TopSpeed=speed, FuelCapacity=cap, Country=country,
+                                                           Mileage=mile, Color=color)
+
+        return render(request, self.template_name, {'form': form, 'carList': carList, 'orderedByYear': orderedByYear,
+                                                    'orderedByBrand': orderedByBrand,
+                                                    'orderedByModel': orderedByModel,
+                                                    'orderedByEngine': orderedByEngine,
+                                                    'orderedByCylinders': orderedByCylinders,
+                                                    'orderedByDoors': orderedByDoors,
+                                                    'orderedByWeight': orderedByWeight,
+                                                    'orderedByFuel': orderedByFuel,
+                                                    'orderedByBody': orderedByBody,
+                                                    'orderedByTrans': orderedByTrans,
+                                                    'orderedByHP': orderedByHP,
+                                                    'orderedBySpeed': orderedBySpeed,
+                                                    'orderedByCountry': orderedByCountry,
+                                                    'orderedByCap': orderedByCap,
+                                                    'orderedByMile': orderedByMile,
+                                                    'orderedByColor': orderedByColor,
                                                     'searchedItem': searchedItem})
