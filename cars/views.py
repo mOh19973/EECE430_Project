@@ -84,17 +84,22 @@ class Search(View):
         country = request.GET.get("Country")
         mile = request.GET.get("Mileage")
         color = request.GET.get("Color")
-
+        x = 0
         if form.is_valid():
             for i in carspecs:
                 if not request.GET.get(i) == "All":
-                    searchedItem = CarModel.objects.filter(CarBrand=carBrand, Model=model, Year=year, Engine=engine,
-                                                           Cylinders=cylinders, DoorsNum=doors, Weight=weight,
-                                                           Fuel=fuel, BodyType=bodytype, Transmission=transmission,
-                                                           HP=hp, TopSpeed=speed, FuelCapacity=cap, Country=country,
-                                                           Mileage=mile, Color=color)
+                    x = x+1
+            if x == 16:
+                searchedItem = CarModel.objects.filter(CarBrand=carBrand, Model=model, Year=year, Engine=engine,
+                                                       Cylinders=cylinders, DoorsNum=doors, Weight=weight,
+                                                       Fuel=fuel, BodyType=bodytype, Transmission=transmission,
+                                                       HP=hp, TopSpeed=speed, FuelCapacity=cap, Country=country,
+                                                       Mileage=mile, Color=color)
 
-        return render(request, self.template_name, {'form': form, 'carList': carList, 'orderedByYear': orderedByYear,
+
+        return render(request, self.template_name, {'form': form,
+                                                    'carList': carList,
+                                                    'orderedByYear': orderedByYear,
                                                     'orderedByBrand': orderedByBrand,
                                                     'orderedByModel': orderedByModel,
                                                     'orderedByEngine': orderedByEngine,
