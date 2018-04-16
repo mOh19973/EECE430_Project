@@ -44,7 +44,12 @@ class Search(View):
 
     # Display blank form
     def get(self, request):
+        searchedItem = CarModel.objects.all()
         carList = CarModel.objects.all()
-        form = self.form_class(None)
+        form = self.form_class(request.GET)
         ordered = CarModel.objects.values('Year').distinct().order_by('Year').all()
-        return render(request, self.template_name, {'form': form, 'carList': carList, 'ordered': ordered})
+        year = request.GET.get("Year")
+        if form.is_valid():
+            searchedItem = CarModel.objects.filter(Year=year)
+        return render(request, self.template_name, {'form': form, 'carList': carList, 'ordered': ordered,
+                                                    'searchedItem': searchedItem})

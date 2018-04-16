@@ -4,11 +4,20 @@
 {% block content %}
     <h1></h1>
     <h1 style="margin-top: 15px; margin-left: 15px">Search cars</h1>
+
+
+        <ul>{% for stud in searchedItem %}
+            <li>
+
+            {{ stud }}
+
+            </li>{% endfor %}
+        </ul>
     <div class="container-fluid" style="margin-top: 25px" >
         <div class="row">
             <div class="col-sm-12 col-md-7">
                 <div class="panel-body">
-                    <form class="form-horizontal" action="{% url 'cars:search' %}" method="get">
+                    <form class="form-horizontal" action="" method="get">
                         {% csrf_token %}
                         <div class="input-group mb-3">
                             <div class="input-group-prepend">
@@ -69,7 +78,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Number of Doors</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="DoorsNum">
                                 <option selected>All</option>
                                 {% for car in carList %}
                                     <option value="{{ car.DoorsNum }}">{{ car.DoorsNum }}</option>
@@ -80,7 +89,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Weight</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="Weight">
                                 <option selected>All</option>
                                 {% for car in carList %}
                                     <option value="{{ car.Weight }}">{{ car.Weight }}</option>
@@ -91,7 +100,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Fuel Type</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="Fuel">
                                 <option selected>All</option>
                                 {% for car in carList %}
                                     <option value="{{ car.Fuel }}">{{ car.Fuel }}</option>
@@ -102,7 +111,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Body Type</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="BodyType">
                                 <option selected>All</option>
                                 {% for car in carList %}
                                     <option value="{{ car.BodyType }}">{{ car.BodyType }}</option>
@@ -113,7 +122,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Transmission Type</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="Transmission">
                                 <option selected>All</option>
                                 {% for car in carList %}
                                     <option value="{{ car.Transmission }}">{{ car.Transmission }}</option>
@@ -124,7 +133,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Horsepower</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="HP">
                                 <option selected>All</option>
                                 {% for car in carList %}
                                     <option value="{{ car.HP }}">{{ car.HP }}</option>
@@ -135,7 +144,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Top Speed</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="TopSpeed">
                                 <option selected>All</option>
                                 {% for car in carList %}
                                     <option value="{{ car.TopSpeed }}">{{ car.TopSpeed }}</option>
@@ -146,7 +155,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Fuel Capacity</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="FuelCapacity">
                                 <option selected>All</option>
                                 {% for car in carList %}
                                     <option value="{{ car.FuelCapacity }}">{{ car.FuelCapacity }}</option>
@@ -157,7 +166,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Country of Manufacture</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="Country">
                                 <option selected>All</option>
                                 {% for car in carList %}
                                     <option value="{{ car.Country }}">{{ car.Country }}</option>
@@ -168,7 +177,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Mileage</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="Mileage">
                                 <option selected>All</option>
                                 {% for car in carList %}
                                     <option value="{{ car.Mileage }}">{{ car.Mileage }}</option>
@@ -179,7 +188,7 @@
                             <div class="input-group-prepend">
                                 <label class="input-group-text" for="inputGroupSelect01">Color</label>
                             </div>
-                            <select class="custom-select" id="inputGroupSelect01">
+                            <select class="custom-select" id="inputGroupSelect01" name="Color">
                                 <option selected>All</option>
                                 {% for car in carList %}
                                     <option value="{{ car.Color }}">{{ car.Color }}</option>
