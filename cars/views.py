@@ -96,7 +96,6 @@ class Search(View):
                                                        HP=hp, TopSpeed=speed, FuelCapacity=cap, Country=country,
                                                        Mileage=mile, Color=color)
 
-
         return render(request, self.template_name, {'form': form,
                                                     'carList': carList,
                                                     'orderedByYear': orderedByYear,
