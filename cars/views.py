@@ -42,14 +42,15 @@ class Search(View):
     form_class = CarModelForm
     template_name = 'cars/SearchForm.html'
 
-    # Display blank form
     def get(self, request):
-        carspecs =['CarBrand', 'Model', 'Year', 'Engine', 'Cylinders', 'DoorsNum',
-                   'Weight', 'Fuel', 'BodyType', 'Transmission', 'HP', 'TopSpeed',
-                   'FuelCapacity', 'Country', 'Mileage', 'Color']
+        carspecs = ['CarBrand', 'Model', 'Year', 'Engine', 'Cylinders', 'DoorsNum',
+                    'Weight', 'Fuel', 'BodyType', 'Transmission', 'HP', 'TopSpeed',
+                    'FuelCapacity', 'Country', 'Mileage', 'Color']
+
         searchedItem = CarModel.objects.all()
         carList = CarModel.objects.all()
         form = self.form_class(request.GET)
+
         ordered = []
         for i in carspecs:
             ordered.append(CarModel.objects.values(i).distinct().order_by(i).all())
@@ -58,28 +59,39 @@ class Search(View):
         for l in carspecs:
             form_data.append(request.GET.get(l))
 
-        x = 0
         if form.is_valid():
-            for i in carspecs:
-                if not request.GET.get(i) == "All":
-                    x = x+1
-            if x == 16:
-                searchedItem = CarModel.objects.all().filter(CarBrand=form_data.__getitem__(0),
-                                                             Model=form_data.__getitem__(1),
-                                                             Year=form_data.__getitem__(2),
-                                                             Engine=form_data.__getitem__(3),
-                                                             Cylinders=form_data.__getitem__(4),
-                                                             DoorsNum=form_data.__getitem__(5),
-                                                             Weight=form_data.__getitem__(6),
-                                                             Fuel=form_data.__getitem__(7),
-                                                             BodyType=form_data.__getitem__(8),
-                                                             Transmission=form_data.__getitem__(9),
-                                                             HP=form_data.__getitem__(10),
-                                                             TopSpeed=form_data.__getitem__(11),
-                                                             FuelCapacity=form_data.__getitem__(12),
-                                                             Country=form_data.__getitem__(13),
-                                                             Mileage=form_data.__getitem__(14),
-                                                             Color=form_data.__getitem__(15))
+            if not form_data[0] == "All":
+                searchedItem = searchedItem.filter(CarBrand=form_data.__getitem__(0))
+            if not form_data[1] == "All":
+                searchedItem = searchedItem.filter(Model=form_data.__getitem__(1))
+            if not form_data[2] == "All":
+                searchedItem = searchedItem.filter(Year=form_data.__getitem__(2))
+            if not form_data[3] == "All":
+                searchedItem = searchedItem.filter(Engine=form_data.__getitem__(3))
+            if not form_data[4] == "All":
+                searchedItem = searchedItem.filter(Cylinders=form_data.__getitem__(4))
+            if not form_data[5] == "All":
+                searchedItem = searchedItem.filter(DoorsNum=form_data.__getitem__(5))
+            if not form_data[6] == "All":
+                searchedItem = searchedItem.filter(Weight=form_data.__getitem__(6))
+            if not form_data[7] == "All":
+                searchedItem = searchedItem.filter(Fuel=form_data.__getitem__(7))
+            if not form_data[8] == "All":
+                searchedItem = searchedItem.filter(BodyType=form_data.__getitem__(8))
+            if not form_data[9] == "All":
+                searchedItem = searchedItem.filter(Transmission=form_data.__getitem__(9))
+            if not form_data[10] == "All":
+                searchedItem = searchedItem.filter(HP=form_data.__getitem__(10))
+            if not form_data[11] == "All":
+                searchedItem = searchedItem.filter(TopSpeed=form_data.__getitem__(11))
+            if not form_data[12] == "All":
+                searchedItem = searchedItem.filter(FuelCapacity=form_data.__getitem__(12))
+            if not form_data[13] == "All":
+                searchedItem = searchedItem.filter(Country=form_data.__getitem__(13))
+            if not form_data[14] == "All":
+                searchedItem = searchedItem.filter(Mileage=form_data.__getitem__(14))
+            if not form_data[15] == "All":
+                searchedItem = searchedItem.filter(Color=form_data.__getitem__(15))
 
         template_dict = \
             {
