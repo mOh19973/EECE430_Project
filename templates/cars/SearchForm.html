@@ -70,7 +70,7 @@
                                 <select class="custom-select" id="inputGroupSelect01" name="Cylinders">
                                     <option selected>All</option>
                                     {% for car in orderedByCylinders %}
-                                        <option value="{{ car.Cylinders }}">{{ car.Cylinders }} L</option>
+                                        <option value="{{ car.Cylinders }}">{{ car.Cylinders }}</option>
                                     {% endfor %}
                                 </select>
                             </div>
@@ -218,8 +218,8 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <div class="col-sm-offset-2 col-sm-10">
+                        <div class="col-auto">
+                            <div>
                                 <button type="submit" class="btn btn-success">Submit</button>
                             </div>
                         </div>
@@ -227,23 +227,24 @@
                 </form>
             </div>
         </div>
+        <!-- Car Cars -->
+        <ul id="menu">
+            {% for car in searchedItem %}
+                <li>
+                    <div class="card" style="width: 18rem;">
+                        <img class="card-img-top" src="{{car.CarImg.url}}" alt="{{car.Model}}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{car}}</h5>
+                            <p class="card-text">{{car.Transmission}} </p>
+                            <a href="{% url 'cars:detail' car.id %}" class="btn btn-primary">Details</a>
+                        </div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
 
 
 
-    <!-- Car Cars -->
-    <ul id="menu">
-        {% for car in searchedItem %}
-            <li>
-                <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="{{car.CarImg.url}}" alt="{{car.Model}}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{car}}</h5>
-                        <p class="card-text">{{car.Transmission}} </p>
-                        <a href="{% url 'cars:detail' car.id %}" class="btn btn-primary">Details</a>
-                    </div>
-                </div>
-            </li>
-        {% endfor %}
-    </ul>
+
 {% endblock %}

@@ -50,68 +50,57 @@ class Search(View):
         searchedItem = CarModel.objects.all()
         carList = CarModel.objects.all()
         form = self.form_class(request.GET)
+        ordered = []
+        for i in carspecs:
+            ordered.append(CarModel.objects.values(i).distinct().order_by(i).all())
 
-        orderedByBrand = CarModel.objects.values('CarBrand').distinct().order_by('CarBrand').all()
-        orderedByModel = CarModel.objects.values('Model').distinct().order_by('Model').all()
-        orderedByYear = CarModel.objects.values('Year').distinct().order_by('Year').all()
-        orderedByEngine = CarModel.objects.values('Engine').distinct().order_by('Engine').all()
-        orderedByCylinders = CarModel.objects.values('Cylinders').distinct().order_by('Cylinders').all()
-        orderedByDoors = CarModel.objects.values('DoorsNum').distinct().order_by('DoorsNum').all()
-        orderedByWeight = CarModel.objects.values('Weight').distinct().order_by('Weight').all()
-        orderedByFuel = CarModel.objects.values('Fuel').distinct().order_by('Fuel').all()
-        orderedByBody = CarModel.objects.values('BodyType').distinct().order_by('BodyType').all()
-        orderedByTrans = CarModel.objects.values('Transmission').distinct().order_by('Transmission').all()
-        orderedByHP = CarModel.objects.values('HP').distinct().order_by('HP').all()
-        orderedBySpeed = CarModel.objects.values('TopSpeed').distinct().order_by('TopSpeed').all()
-        orderedByCap = CarModel.objects.values('FuelCapacity').distinct().order_by('FuelCapacity').all()
-        orderedByCountry = CarModel.objects.values('Country').distinct().order_by('Country').all()
-        orderedByMile = CarModel.objects.values('Mileage').distinct().order_by('Mileage').all()
-        orderedByColor = CarModel.objects.values('Color').distinct().order_by('Color').all()
+        form_data = []
+        for l in carspecs:
+            form_data.append(request.GET.get(l))
 
-        year = request.GET.get("Year")
-        carBrand = request.GET.get("CarBrand")
-        model = request.GET.get("Model")
-        engine = request.GET.get("Engine")
-        cylinders = request.GET.get("Cylinders")
-        doors = request.GET.get("DoorsNum")
-        weight = request.GET.get("Weight")
-        fuel = request.GET.get("Fuel")
-        bodytype = request.GET.get("BodyType")
-        transmission = request.GET.get("Transmission")
-        hp = request.GET.get("HP")
-        speed = request.GET.get("TopSpeed")
-        cap = request.GET.get("FuelCapacity")
-        country = request.GET.get("Country")
-        mile = request.GET.get("Mileage")
-        color = request.GET.get("Color")
         x = 0
         if form.is_valid():
             for i in carspecs:
                 if not request.GET.get(i) == "All":
                     x = x+1
             if x == 16:
-                searchedItem = CarModel.objects.filter(CarBrand=carBrand, Model=model, Year=year, Engine=engine,
-                                                       Cylinders=cylinders, DoorsNum=doors, Weight=weight,
-                                                       Fuel=fuel, BodyType=bodytype, Transmission=transmission,
-                                                       HP=hp, TopSpeed=speed, FuelCapacity=cap, Country=country,
-                                                       Mileage=mile, Color=color)
+                searchedItem = CarModel.objects.all().filter(CarBrand=form_data.__getitem__(0),
+                                                             Model=form_data.__getitem__(1),
+                                                             Year=form_data.__getitem__(2),
+                                                             Engine=form_data.__getitem__(3),
+                                                             Cylinders=form_data.__getitem__(4),
+                                                             DoorsNum=form_data.__getitem__(5),
+                                                             Weight=form_data.__getitem__(6),
+                                                             Fuel=form_data.__getitem__(7),
+                                                             BodyType=form_data.__getitem__(8),
+                                                             Transmission=form_data.__getitem__(9),
+                                                             HP=form_data.__getitem__(10),
+                                                             TopSpeed=form_data.__getitem__(11),
+                                                             FuelCapacity=form_data.__getitem__(12),
+                                                             Country=form_data.__getitem__(13),
+                                                             Mileage=form_data.__getitem__(14),
+                                                             Color=form_data.__getitem__(15))
 
-        return render(request, self.template_name, {'form': form,
-                                                    'carList': carList,
-                                                    'orderedByYear': orderedByYear,
-                                                    'orderedByBrand': orderedByBrand,
-                                                    'orderedByModel': orderedByModel,
-                                                    'orderedByEngine': orderedByEngine,
-                                                    'orderedByCylinders': orderedByCylinders,
-                                                    'orderedByDoors': orderedByDoors,
-                                                    'orderedByWeight': orderedByWeight,
-                                                    'orderedByFuel': orderedByFuel,
-                                                    'orderedByBody': orderedByBody,
-                                                    'orderedByTrans': orderedByTrans,
-                                                    'orderedByHP': orderedByHP,
-                                                    'orderedBySpeed': orderedBySpeed,
-                                                    'orderedByCountry': orderedByCountry,
-                                                    'orderedByCap': orderedByCap,
-                                                    'orderedByMile': orderedByMile,
-                                                    'orderedByColor': orderedByColor,
-                                                    'searchedItem': searchedItem})
+        template_dict = \
+            {
+                'form': form,
+                'carList': carList,
+                'orderedByBrand': ordered[0],
+                'orderedByModel': ordered[1],
+                'orderedByYear': ordered[2],
+                'orderedByEngine': ordered[3],
+                'orderedByCylinders': ordered[4],
+                'orderedByDoors': ordered[5],
+                'orderedByWeight': ordered[6],
+                'orderedByFuel': ordered[7],
+                'orderedByBody': ordered[8],
+                'orderedByTrans': ordered[9],
+                'orderedByHP': ordered[10],
+                'orderedBySpeed': ordered[11],
+                'orderedByCap': ordered[12],
+                'orderedByCountry': ordered[13],
+                'orderedByMile': ordered[14],
+                'orderedByColor': ordered[15],
+                'searchedItem': searchedItem
+            }
+        return render(request, self.template_name, template_dict)
