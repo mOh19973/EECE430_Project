@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^cars/', include('cars.urls'), name='car'),
     url(r'^accounts/', include('accounts.urls'), name='accounts'),
     url(r'^account/$', views.account_redirect, name='account-redirect'),
+    url(r'^testdrive/', include('testdrive.urls'), name='testdrive'),
 ]
 
 if settings.DEBUG:
