@@ -7,7 +7,7 @@ from .models import TDModel
 
 class IndexView(generic.ListView):
     template_name = 'testdrive/index.html'
-    context_object_name = 'testdriveList'
+    context_object_name = 'testdrive'
 
     def get_queryset(self):
         return TDModel.objects.all()
@@ -33,7 +33,7 @@ def home(request):
             minutes = formdata['minutes']
             TDModel.objects.create(username=username, carName=carName, day=day, month=month, year=year,
                                      hour=hour, minutes=minutes)
-            return HttpResponseRedirect('/testdrive/success')        #redirected to success page
+            return HttpResponseRedirect('testdrive/success')        #redirected to success page
     else:
         form = TDForm()
     return render(request, 'testdrive/createTD.html', {'form': form})
