@@ -1,14 +1,31 @@
 {% extends   'exterior.html' %}
 {% load staticfiles %}
+{% block login %}
+        {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'accounts:profile' username=user.username %}" style="color: white; ">Welcome, {{ user.first_name }}</a>
+        {% else %}
+            <a class="nav-item nav-link" href="{% url 'accounts:login' %}" style="color: white; ">Login</a>
+        {% endif %}
+    {% endblock %}
+
+    {% block logout %}
+        {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'accounts:logout' %}" style="color: white; ">Logout</a>
+        {% else %}
+
+            <a class="nav-item nav-link" href="{% url 'accounts:register' %}" style="color:white;">Register</a>
+        {% endif %}
+    {% endblock %}
 
 {% block content %}
 
 
     <!-- Jumbotron-->
     <div class="jumbotron">
-    <a class="btn btn-outline-dark" href="{% url 'cars:index' %}" role="button">Back</a>
-           <h3> </h3>
+        <a class="btn btn-outline-dark" href="{% url 'cars:index' %}" role="button">Back</a>
+        <h3> </h3>
         <h1 class="display-4">  <img src="{{car.CarImg.url}}" style="width: 300px;" alt="{{car.Model}}"> {{ car}} </h1>
+        <a  href="{% url 'testdrive:home'%}" class="badge badge-secondary">Book a test drive</a>
         <hr class="my-4">
         <p class="lead">
             <!-- Table -->

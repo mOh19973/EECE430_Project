@@ -4,8 +4,6 @@ from django.contrib.auth import views as auth_views
 app_name = 'accounts'
 
 urlpatterns = [
-    # /accounts/
-    # url(r'^$', views.IndexView.as_view(), name='default'),
 
     # /accounts/register/
     url(r'^register/$', views.UserFormView.as_view(), name='register'),

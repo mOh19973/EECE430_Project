@@ -1,0 +1,10 @@
+{% extends 'exterior.html' %}
+{% block content %}
+    <ul id="menu">
+    {% for TDModel in testdriveList %}
+    <li>
+        <a href="{% url 'testdrive:detail' TDModel.id %}"> {{ TDModel }} </a>
+    </li>
+    {% endfor %}
+    </ul>
+{% endblock %}

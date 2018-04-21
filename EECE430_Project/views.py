@@ -2,7 +2,8 @@ from django.shortcuts import render, redirect
 
 
 def homepage(request):
-    return render(request, 'homepage.html')
+    user = request.user
+    return render(request, 'homepage.html', {'user': user})
 
 
 def account_redirect(request):

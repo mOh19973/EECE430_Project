@@ -21,25 +21,30 @@ class DetailView(generic.DetailView):
     context_object_name = 'car'
     model = CarModel
     template_name = 'cars/detail.html'
+    user = User
 
 
 class CarCreate(CreateView):
     model = CarModel
     fields = '__all__'
+    user = User
 
 
 class CarUpdate(UpdateView):
     model = CarModel
     fields = '__all__'
+    user = User
 
 
 class CarDelete(DeleteView):
     model = CarModel
     success_url = reverse_lazy('cars:index')
+    user = User
 
 
 class Search(View):
     form_class = CarModelForm
+    user = User
     template_name = 'cars/SearchForm.html'
 
     def get(self, request):

@@ -1,16 +1,8 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
-from django.views import generic, View
+from django.views import View
 from .forms import UserForm
-
-
-class IndexView(generic.ListView):
-    template_name = 'accounts/default_page.html'
-    context_object_name = 'UserForm'
-
-    def get_queryset(self):
-        return UserForm.objects.all()
 
 
 def get_user_profile(request, username):
@@ -19,6 +11,7 @@ def get_user_profile(request, username):
 
 
 class UserFormView(View):
+    user = User
     form_class = UserForm
     template_name = 'accounts/RegistrationForm.html'
 
