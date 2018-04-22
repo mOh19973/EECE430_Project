@@ -2,215 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a6b909e-e111-4960-9e99-b764fd8065dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/EECE430_Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/EECE430_Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/back2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/exampe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/alarm.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/align-center.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/align-justify.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/align-left.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/align-right.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/anchor.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/archive.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/arrow-down.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/arrow-left.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/arrow-right.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/arrow-thin-down.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/arrow-thin-left.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/arrow-thin-right.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/arrow-thin-up.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/arrow-up.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/article.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/backspace.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/basket.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/basketball.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/battery-empty.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/battery-full.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/battery-low.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/battery-medium.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/bell.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/blog.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/bluetooth.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/bold.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/bookmark.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/bookmarks.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/box.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/briefcase.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/brightness-low.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/brightness-max.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/brightness-medium.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/broadcast.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/browser-upload.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/browser.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/brush.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/calendar.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/camcorder.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/camera.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/card.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/cart.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/checklist.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/checkmark.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/chevron-down.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/chevron-left.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/chevron-right.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/chevron-up.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/clipboard.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/clock.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/clockwise.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/cloud-download.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/cloud-upload.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/cloud.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/code.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/contract-2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/contract.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/conversation.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/copy.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/crop.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/cross.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/crosshair.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/cutlery.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/device-desktop.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/device-mobile.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/device-tablet.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/direction.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/disc.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/document-delete.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/document-edit.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/document-new.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/document-remove.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/document.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/dot.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/dots-2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/dots-3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/download.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/duplicate.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/enter.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/exit.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/expand-2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/expand.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/experiment.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/export.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/feed.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/flag.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/flashlight.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/folder-open.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/folder.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/forward.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/gaming.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/gear.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/graduation.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/graph-bar.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/graph-line.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/graph-pie.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/headset.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/heart.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/help.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/home.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/hourglass.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/inbox.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/information.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/italic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/jewel.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/lifting.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/lightbulb.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/link-broken.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/link.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/list.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/loading.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/location.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/lock-open.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/lock.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/mail.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/map.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/media-loop.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/media-next.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/media-pause.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/media-play.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/media-previous.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/media-record.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/media-shuffle.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/media-stop.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/medical.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/menu.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/message.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/meter.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/microphone.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/minus.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/monitor.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/move.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/music.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/network-1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/network-2.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/network-3.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/network-4.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/network-5.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/pamphlet.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/paperclip.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/pencil.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/phone.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/photo-group.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/photo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/pill.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/pin.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/plus.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/power.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/preview.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/print.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/pulse.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/question.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/reply-all.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/reply.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/return.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/retweet.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/rocket.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/scale.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/search.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/shopping-bag.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/skip.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/stack.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/star.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/stopwatch.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/store.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/suitcase.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/swap.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/tag-delete.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/tag.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/tags.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/thumbs-down.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/thumbs-up.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/ticket.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/time-reverse.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/to-do.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/toggles.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/trash.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/trophy.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/upload.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/user-group.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/user-id.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/user.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/vibrate.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/view-apps.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/view-list-large.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/view-list.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/view-thumb.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/volume-full.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/volume-low.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/volume-medium.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/volume-off.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/wallet.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/warning.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/web.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/weight.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/wifi.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/wrong.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/zoom-in.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/icons/zoom-out.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/homepage.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/homepage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdrive/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/testdrive/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testdrive/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/testdrive/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/exterior.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/exterior.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdrive/static/css/cover.css" beforeDir="false" afterPath="$PROJECT_DIR$/testdrive/static/css/cover.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdrive/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/testdrive/static/css/index.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -260,23 +55,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testdrive/views.py">
+      <file leaf-file-name="login.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/accounts/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#35#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="374">
+              <caret line="22" selection-start-line="22" selection-end-line="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/accounts/login.html">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/testdrive/static/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="204">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/cars/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -293,23 +94,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/testdrive/detail.html">
+      <file leaf-file-name="exterior.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/exterior.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+            <state relative-caret-position="201">
+              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homepage.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="homepage.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/homepage.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-              <folding>
-                <element signature="n#style#0;n#a#5;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="340">
+              <caret line="48" column="89" selection-start-line="48" selection-start-column="89" selection-end-line="48" selection-end-column="89" />
             </state>
           </provider>
         </entry>
@@ -374,8 +172,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/EECE430_Project/homepage.html" />
-        <option value="$PROJECT_DIR$/cars/templates/cars/default_index.html" />
         <option value="$PROJECT_DIR$/EECE430_Project/apps.py" />
         <option value="$PROJECT_DIR$/accounts/templates/accounts/exterior.html" />
         <option value="$PROJECT_DIR$/cars/templates/cars/exterior.html" />
@@ -398,7 +194,6 @@
         <option value="$PROJECT_DIR$/static/css/main.css" />
         <option value="$PROJECT_DIR$/static/css/index.css" />
         <option value="$PROJECT_DIR$/cars/forms.py" />
-        <option value="$PROJECT_DIR$/templates/cars/index.html" />
         <option value="$PROJECT_DIR$/cars/urls.py" />
         <option value="$PROJECT_DIR$/EECE430_Project/views.py" />
         <option value="$PROJECT_DIR$/templates/cars/carmodel_confirm_delete.html" />
@@ -413,7 +208,6 @@
         <option value="$PROJECT_DIR$/EECE430_Project/settings.py" />
         <option value="$PROJECT_DIR$/EECE430_Project/urls.py" />
         <option value="$PROJECT_DIR$/templates/testdrive/success.html" />
-        <option value="$PROJECT_DIR$/templates/exterior.html" />
         <option value="$PROJECT_DIR$/templates/testdrive/index.html" />
         <option value="$PROJECT_DIR$/testdrive/forms.py" />
         <option value="$PROJECT_DIR$/templates/testdrive/createTD.html" />
@@ -423,8 +217,12 @@
         <option value="$PROJECT_DIR$/testdrive/views.py" />
         <option value="$PROJECT_DIR$/testdrive/urls.py" />
         <option value="$PROJECT_DIR$/templates/testdrive/detail.html" />
-        <option value="$PROJECT_DIR$/testdrive/static/css/cover.css" />
         <option value="$PROJECT_DIR$/templates/homepage.html" />
+        <option value="$PROJECT_DIR$/templates/cars/index.html" />
+        <option value="$PROJECT_DIR$/cars/static/css/index.css" />
+        <option value="$PROJECT_DIR$/templates/exterior.html" />
+        <option value="$PROJECT_DIR$/testdrive/static/css/index.css" />
+        <option value="$PROJECT_DIR$/testdrive/static/css/cover.css" />
       </list>
     </option>
   </component>
@@ -464,7 +262,36 @@
             <path>
               <item name="EECE430_Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="EECE430_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="cars" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EECE430_Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="EECE430_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="EECE430_Project" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EECE430_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EECE430_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EECE430_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EECE430_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="accounts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EECE430_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EECE430_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="cars" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="EECE430_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="EECE430_Project" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="testdrive" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="EECE430_Project" type="b2602c69:ProjectViewProjectNode" />
@@ -678,26 +505,26 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.121522695" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.32673267" />
-      <window_info id="Favorites" order="2" sideWeight="0.50165015" side_tool="true" weight="0.16490166" />
+      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49924356" weight="0.32838285" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834985" weight="0.2199037" />
       <window_info id="Structure" order="1" sideWeight="0.50165015" side_tool="true" weight="0.16490166" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="5" />
-      <window_info anchor="bottom" id="Version Control" order="13" sideWeight="0.49924356" weight="0.32838285" />
-      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.32673267" />
+      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32838285" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
       <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.39933994" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.32838285" />
-      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Cvs" order="6" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="right" id="SciView" order="3" weight="0.32980332" />
-      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39933994" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Concurrent Activities Diagram" order="2" show_stripe_button="false" weight="0.32838285" />
-      <window_info anchor="bottom" id="Python Console" order="11" weight="0.32838285" />
+      <window_info id="Favorites" order="2" sideWeight="0.50165015" side_tool="true" weight="0.16490166" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -753,23 +580,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/testdrive/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/django/core/handlers/exception.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
@@ -937,13 +747,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/testdrive/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/testdrive/success.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -958,13 +761,6 @@
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cars/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="15" lean-forward="true" selection-start-line="27" selection-start-column="15" selection-end-line="27" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1037,13 +833,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/exterior.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testdrive/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -1073,16 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testdrive/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cars/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1090,30 +869,6 @@
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testdrive/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/accounts/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/testdrive/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -1127,20 +882,86 @@
     <entry file="file://$PROJECT_DIR$/testdrive/static/img/home.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/testdrive/static/css/cover.css">
+    <entry file="file://$PROJECT_DIR$/testdrive/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="32" />
+        <state relative-caret-position="340">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/testdrive/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="9" lean-forward="true" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cars/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="1" lean-forward="true" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/testdrive/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="15" selection-start-line="8" selection-start-column="15" selection-end-line="8" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdrive/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cars/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="30" column="16" lean-forward="true" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/exterior.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/homepage.html">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="48" column="89" selection-start-line="48" selection-start-column="89" selection-end-line="48" selection-end-column="89" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdrive/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
-          <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#a#5;n#nav#0;n#div#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdrive/static/css/cover.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-544">
+          <caret line="27" column="6" lean-forward="true" selection-start-line="27" selection-start-column="6" selection-end-line="27" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/accounts/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
         </state>
       </provider>
     </entry>

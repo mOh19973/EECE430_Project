@@ -1,4 +1,4 @@
-{% load staticfiles %}
+{% load static %}
 <html lang="en">
 <head>
 
@@ -11,8 +11,8 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>
 
 </head>
-<body>
 
+<body>
 
 
 
@@ -49,6 +49,7 @@
     </nav>
 
   </div>
+
     {% block content %}
     {% endblock %}
 </body>
