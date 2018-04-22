@@ -2,7 +2,7 @@
 {% load staticfiles %}
 
 {% block title%} Car Index {% endblock %}
-
+{% block css %}<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}"/>{% endblock %}
 
     {% block login %}
         {% if user.is_authenticated %}
