@@ -17,8 +17,8 @@ class IndexView(generic.ListView):
 
 class DetailView(generic.DetailView):
     template_name = 'testdrive/detail.html'
-    context_object_name = 'testdriveList'
-    form = TDForm
+    model = TDModel
+    context_object_name = 'testdrive'
 
 
 def home(request, pk):
@@ -32,7 +32,3 @@ def home(request, pk):
     else:
         form = TDForm()
     return render(request, 'testdrive/createTD.html', {'form': form})
-
-
-def success(request):
-    return render(request, 'testdrive/success.html')
