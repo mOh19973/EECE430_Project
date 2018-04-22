@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponseRedirect
 from django.views import generic
 
 from cars.models import CarModel
@@ -25,16 +24,14 @@ class DetailView(generic.DetailView):
 def home(request, pk):
 
     if request.method == 'POST':
-        form = TDForm(request.POST)
-        #if form.is_valid():
-        user = User.objects.get(username = request.user)
+        user = User.objects.get(username=request.user)
         car = CarModel.objects.get(id=pk)
         drive = request.POST['driveDate']
         TDModel.objects.create(driveDate=drive, driveCar=car, driver=user)
         return render(request, 'testdrive/success.html')
     else:
         form = TDForm()
-    return render(request, 'testdrive/createTD.html', {'form': form} )
+    return render(request, 'testdrive/createTD.html', {'form': form})
 
 
 def success(request):
