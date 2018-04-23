@@ -1,0 +1,21 @@
+.navbar-brand{
+    font-family: 'Sofia', sans-serif;
+}
+
+.nav{
+  color:#fbfbfb;
+  border-radius: 0;
+  font-family: 'Sofia' , sans-serif;
+}
+
+#menu{
+    display:block;
+    padding:0;
+    text-align:center;
+    margin:50px;
+}
+
+#menu li {
+    display:inline-block;
+    margin: 30px;
+}
