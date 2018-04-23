@@ -22,9 +22,11 @@ class CarModelForm(forms.ModelForm):
             'Model': 'Model Name',
             'DoorsNum': 'Number of Doors',
             'BodyType': 'Body Type',
-            'HP': 'HorsePower',
+            'HP': 'Horsepower',
             'TopSpeed': 'Top Speed',
-            'FuelCapacity': 'Fuel Capacity'
+            'FuelCapacity': 'Fuel Capacity',
+            'Fuel': 'Fuel Type',
+            'Engine': 'Engine Type'
         }
         CarModel.CarBrand = forms.ChoiceField(choices=[car for car in CarModel.objects.all()])
 
