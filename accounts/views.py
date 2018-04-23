@@ -23,7 +23,6 @@ class UserFormView(View):
     # process form data
     def post(self, request):
         form = self.form_class(request.POST)
-
         if form.is_valid():
             user = form.save(commit=False)
 
@@ -40,5 +39,4 @@ class UserFormView(View):
                 if user.is_active:
                     login(request, user)
                     return redirect('cars:index')
-
         return render(request, self.template_name, {'form': form})
