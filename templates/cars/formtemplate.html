@@ -1,4 +1,11 @@
 {% for field in form %}
-    <label for="{{ field.label }}" id="{{ field.label }}" class="sr-only">{{field.label}}</label>
-    <div>{{ field }}</div>
+    <div class="col-auto">
+        <label class="sr-only">{{field.label}}</label>
+        <div class="input-group mb-2">
+            <div class="input-group-prepend">
+                <div class="input-group-text">{{ field.label }}</div>
+            </div>
+            {{ field }}
+        </div>
+    </div>
 {% endfor %}

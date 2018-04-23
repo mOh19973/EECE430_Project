@@ -30,41 +30,6 @@ class CarModelForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super(CarModelForm, self).__init__(*args, **kwargs)
-        self.fields['CarBrand'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Car Brand',
-                                                     'id': 'username',
-                                                     'style': 'margin-bottom: -1px; '
-                                                              'border-bottom-right-radius: 0; '
-                                                              'border-bottom-left-radius: 0; '
-                                                              'border-top-left-radius: 0; '
-                                                              'border-top-right-radius: 0;'})
-        self.fields['Model'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Username',
-                                                     'id': 'username',
-                                                     'style': 'margin-bottom: -1px; '
-                                                              'border-bottom-right-radius: 0; '
-                                                              'border-bottom-left-radius: 0; '
-                                                              'border-top-left-radius: 0; '
-                                                              'border-top-right-radius: 0;'})
-        self.fields['BodyType'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Username',
-                                                     'id': 'username',
-                                                     'style': 'margin-bottom: -1px; '
-                                                              'border-bottom-right-radius: 0; '
-                                                              'border-bottom-left-radius: 0; '
-                                                              'border-top-left-radius: 0; '
-                                                              'border-top-right-radius: 0;'})
-        self.fields['HP'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Username',
-                                                     'id': 'username',
-                                                     'style': 'margin-bottom: -1px; '
-                                                              'border-bottom-right-radius: 0; '
-                                                              'border-bottom-left-radius: 0; '
-                                                              'border-top-left-radius: 0; '
-                                                              'border-top-right-radius: 0;'})
-        self.fields['TopSpeed'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Username',
-                                                     'id': 'username',
-                                                     'style': 'margin-bottom: -1px; '
-                                                              'border-bottom-right-radius: 0; '
-                                                              'border-bottom-left-radius: 0; '
-                                                              'border-top-left-radius: 0; '
-                                                              'border-top-right-radius: 0;'})
 
-        self.fields['FuelCapacity'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Password',
-                                                     'id': 'password'})
+        for field in self.fields:
+            self.fields[field].widget.attrs.update({'class': 'form-control'})

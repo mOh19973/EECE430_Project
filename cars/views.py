@@ -26,13 +26,13 @@ class DetailView(generic.DetailView):
 
 class CarCreate(CreateView):
     model = CarModel
-    fields = '__all__'
     user = User
+    form_class = CarModelForm
 
 
 class CarUpdate(UpdateView):
     model = CarModel
-    fields = '__all__'
+    form_class = CarModelForm
     user = User
 
 
