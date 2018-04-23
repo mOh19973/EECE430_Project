@@ -17,11 +17,22 @@
     {% endblock %}
 
 {% block content %}
+    <div class="jumbotron">
+        <p class="lead my-1">Please specify date and time</p>
+        <hr class="my-4">
 <form method="post">
     {% csrf_token %}
-    <label>Test Drive Date and Time:
-        <input type="datetime-local" name="driveDate">
-    </label>
-    <input type="submit" value="Submit"/>
+    <div class="col-sm-5">
+    <div class="input-group mb-3">
+
+        <input type="datetime-local"  class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name="driveDate">
+    </div>
+    <div>
+        <button type="submit" class="btn btn-success">Submit</button>
+        <a class="btn btn-secondary" href="{% url 'cars:detail' pk=pk %}" role="button">Back to Details</a>
+    </div>
+        </div>
 </form>
+    </div>
+    </body>
 {% endblock %}

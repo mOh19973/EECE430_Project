@@ -31,4 +31,4 @@ def home(request, pk):
         return render(request, 'testdrive/success.html')
     else:
         form = TDForm()
-    return render(request, 'testdrive/createTD.html', {'form': form})
+    return render(request, 'testdrive/createTD.html', {'form': form, 'pk': pk})

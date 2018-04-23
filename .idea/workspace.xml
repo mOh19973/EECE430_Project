@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a6b909e-e111-4960-9e99-b764fd8065dd" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/cars/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cars/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/cars/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/accounts/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/accounts/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cars/CarModel_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cars/CarModel_form.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/cars/formtemplate.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/cars/formtemplate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/testdrive/createTD.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/testdrive/createTD.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testdrive/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/testdrive/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,74 +53,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cars/views.py">
+      <file leaf-file-name="createTD.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/testdrive/createTD.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="52" selection-end-column="66" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="272">
+              <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cars/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="490">
-              <caret line="36" column="96" selection-start-line="36" selection-start-column="96" selection-end-line="36" selection-end-column="96" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cars/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#28#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CarModel_form.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/cars/CarModel_form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="16" column="78" lean-forward="true" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SearchForm.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/cars/SearchForm.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="formtemplate.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="formtemplate.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/cars/formtemplate.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/cars/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+              <caret line="9" column="10" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -151,7 +94,7 @@
       <find>300px</find>
       <find>reverse</find>
       <find>template</find>
-      <find />
+      <find>block cont</find>
       <find>os</find>
       <find>templ</find>
       <find>stat</find>
@@ -160,7 +103,7 @@
       <find>user</find>
       <find>block</find>
       <find>col-2</find>
-      <find />
+      <find>input-group mb-3</find>
       <find>year</find>
       <find>do</find>
       <find>trans</find>
@@ -173,7 +116,7 @@
     </findStrings>
     <replaceStrings>
       <replace>col-auto</replace>
-      <replace />
+      <replace>input-group mb-3 col</replace>
       <replace>item</replace>
       <replace>searchedItem</replace>
     </replaceStrings>
@@ -213,10 +156,8 @@
         <option value="$PROJECT_DIR$/templates/testdrive/success.html" />
         <option value="$PROJECT_DIR$/templates/testdrive/index.html" />
         <option value="$PROJECT_DIR$/testdrive/forms.py" />
-        <option value="$PROJECT_DIR$/templates/testdrive/createTD.html" />
         <option value="$PROJECT_DIR$/testdrive/admin.py" />
         <option value="$PROJECT_DIR$/testdrive/models.py" />
-        <option value="$PROJECT_DIR$/testdrive/views.py" />
         <option value="$PROJECT_DIR$/testdrive/urls.py" />
         <option value="$PROJECT_DIR$/templates/testdrive/detail.html" />
         <option value="$PROJECT_DIR$/cars/static/css/index.css" />
@@ -237,9 +178,11 @@
         <option value="$PROJECT_DIR$/templates/accounts/user_profile.html" />
         <option value="$PROJECT_DIR$/templates/accounts/login.html" />
         <option value="$PROJECT_DIR$/cars/views.py" />
+        <option value="$PROJECT_DIR$/templates/cars/formtemplate.html" />
         <option value="$PROJECT_DIR$/templates/cars/CarModel_form.html" />
         <option value="$PROJECT_DIR$/cars/forms.py" />
-        <option value="$PROJECT_DIR$/templates/cars/formtemplate.html" />
+        <option value="$PROJECT_DIR$/testdrive/views.py" />
+        <option value="$PROJECT_DIR$/templates/testdrive/createTD.html" />
       </list>
     </option>
   </component>
@@ -272,24 +215,7 @@
             <path>
               <item name="EECE430_Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="EECE430_Project" type="462c0819:PsiDirectoryNode" />
-              <item name="cars" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EECE430_Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EECE430_Project" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EECE430_Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EECE430_Project" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="accounts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="EECE430_Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="EECE430_Project" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="cars" type="462c0819:PsiDirectoryNode" />
+              <item name="testdrive" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -434,7 +360,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="683" height="728" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="5" />
@@ -444,7 +370,7 @@
       <window_info anchor="bottom" id="Python Console" order="11" weight="0.32838285" />
       <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49924356" weight="0.3349835" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.40924093" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49834985" weight="0.15582451" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49834985" visible="true" weight="0.15582451" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.32980332" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32838285" />
@@ -652,13 +578,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/testdrive/createTD.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/testdrive/admin.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -739,16 +658,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testdrive/static/img/Car_Logo.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/testdrive/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/testdrive/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -857,20 +766,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cars/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="50" column="8" selection-start-line="50" selection-start-column="8" selection-end-line="52" selection-end-column="66" />
-          <folding>
-            <element signature="e#0#43#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/cars/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="12" column="19" lean-forward="true" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cars/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="24" column="31" lean-forward="true" selection-start-line="24" selection-start-column="31" selection-end-line="24" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -884,26 +793,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cars/SearchForm.html">
+    <entry file="file://$PROJECT_DIR$/cars/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="32" column="34" selection-start-line="32" selection-start-column="34" selection-end-line="32" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/cars/CarModel_form.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="16" column="78" lean-forward="true" selection-start-line="16" selection-start-column="78" selection-end-line="16" selection-end-column="78" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cars/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="36" column="96" selection-start-line="36" selection-start-column="96" selection-end-line="36" selection-end-column="96" />
+        <state relative-caret-position="289">
+          <caret line="71" column="28" selection-start-line="71" selection-start-column="28" selection-end-line="71" selection-end-column="28" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cars/SearchForm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="241" column="28" lean-forward="true" selection-start-line="241" selection-start-column="28" selection-end-line="243" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testdrive/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="354">
+          <caret line="28" column="41" lean-forward="true" selection-start-line="28" selection-start-column="41" selection-end-line="28" selection-end-column="41" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -911,7 +823,21 @@
     <entry file="file://$PROJECT_DIR$/templates/cars/formtemplate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="18" lean-forward="true" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+          <caret line="9" column="10" lean-forward="true" selection-start-line="1" selection-start-column="4" selection-end-line="9" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/cars/CarModel_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="35" column="96" selection-start-line="35" selection-start-column="96" selection-end-line="35" selection-end-column="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/testdrive/createTD.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
         </state>
       </provider>
     </entry>
