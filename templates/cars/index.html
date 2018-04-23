@@ -5,7 +5,6 @@
 {% block css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
 {% endblock %}
-
     {% block login %}
         {% if user.is_authenticated %}
             <a class="nav-item nav-link" href="{% url 'accounts:profile' username=user.username %}" style="color: white; ">Welcome, {{ user.first_name }}</a>

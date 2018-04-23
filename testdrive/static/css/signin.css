@@ -1,8 +1,10 @@
 html,
 body {
   height: 100%;
-
+    background: #333 url("../img/blak.jpg") no-repeat center;
+    background-size: cover;
 }
+
 
 body {
   display: -ms-flexbox;

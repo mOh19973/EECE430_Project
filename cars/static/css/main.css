@@ -10,13 +10,6 @@ body{
   height: 100vh;
 }
 
-.nav{
-  color:#fbfbfb;
-  border-radius: 0;
-
-}
-
-
 
 ul{
   list-style:none;
@@ -29,17 +22,6 @@ ul{
 #title{
   float:left;
   font-size:30px;
-}
-
-#nav li{
-  display:inline-block;
-  margin:0 10px;
-  text-transform:uppercase;
-}
-
-#nav a{
-  text-decoration:none;
-  color:#fbfbfb;
 }
 
 #special{
