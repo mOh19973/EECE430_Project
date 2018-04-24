@@ -1,13 +1,21 @@
+from django.utils import timezone
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
 from django.shortcuts import render, redirect
 from django.views import View
+
+from testdrive.models import TDModel
 from .forms import UserForm
 
 
 def get_user_profile(request, username):
     user = User.objects.get(username=username)
-    return render(request, 'accounts/user_profile.html', {"user": user})
+    upcoming = []
+    testdrive = TDModel.objects.filter(driver=user)
+    for drive in testdrive:
+        if drive.driveDate> timezone.now():
+            upcoming.append(drive)
+    return render(request, 'accounts/user_profile.html', {"user": user, 'upcoming': upcoming})
 
 
 class UserFormView(View):

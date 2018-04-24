@@ -54,6 +54,22 @@
       <th scope="row">Username</th>
       <td>{{user.username}}</td>
     </tr>
+  <tr>
+      <th scope="row">Test Drives Booked</th>
+  <td>
+
+  {% if upcoming %}
+       <ul>
+      {% for drive in upcoming %}
+          <li>{{ drive.driveCar }} reserved on {{drive.driveDate}}</li>
+      {% endfor %}
+      </ul>
+      {% else %}
+      No upcoming testdrives
+  {% endif %}
+
+  </td>
+    </tr>
   </tbody>
 </table>
 </div>

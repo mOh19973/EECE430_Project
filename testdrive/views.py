@@ -1,3 +1,5 @@
+import datetime
+from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
 from django.views import generic
 
@@ -27,8 +29,15 @@ def home(request, pk):
         user = User.objects.get(username=request.user)
         car = CarModel.objects.get(id=pk)
         drive = request.POST['driveDate']
-        TDModel.objects.create(driveDate=drive, driveCar=car, driver=user)
-        return render(request, 'testdrive/success.html')
+        if not datetime.datetime.strptime(drive, '%Y-%m-%dT%H:%M') >= datetime.datetime.now() + datetime.timedelta(days=3):
+            try:
+                TDModel.objects.get(driveCar=car, driveDate=drive)
+                return render(request, 'testdrive/fail.html')
+            except ObjectDoesNotExist:
+                    TDModel.objects.create(driveDate=drive, driveCar=car, driver=user)
+                    return render(request, 'testdrive/success.html')
+        else:
+            return render(request, 'testdrive/pastTime.html')
     else:
         form = TDForm()
     return render(request, 'testdrive/createTD.html', {'form': form, 'pk': pk})

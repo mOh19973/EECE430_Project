@@ -18,7 +18,8 @@
 
 {% block content %}
     <div class="jumbotron">
-        <p class="lead my-1">Please specify date and time</p>
+    <h1 class="display-4">Please specify date and time</h1>
+        <p class="lead my-1">Bookings should be made 3 days ahead of requested date</p>
         <hr class="my-4">
 <form method="post">
     {% csrf_token %}
@@ -34,5 +35,4 @@
         </div>
 </form>
     </div>
-    </body>
 {% endblock %}
