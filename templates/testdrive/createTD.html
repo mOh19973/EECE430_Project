@@ -34,5 +34,23 @@
     </div>
         </div>
 </form>
+    {% if upcoming %}
+  <p><table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Reserved dates for this car</th>
+      <th scope="col">Booked by</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for drive in upcoming %}
+       <tr>
+           <td>{{ drive.driveDate }}</td>
+           <td>{{ drive.driver }}</td>
+       </tr>
+      {% endfor %}
+  </tbody>
+</table>
+    {% endif %}
     </div>
 {% endblock %}

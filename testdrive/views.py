@@ -1,4 +1,5 @@
 import datetime
+from django.utils import timezone
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
 from django.views import generic
@@ -23,8 +24,13 @@ class DetailView(generic.DetailView):
     context_object_name = 'testdrive'
 
 
-def home(request, pk):
-
+def createTD(request, pk):
+    upcoming = []
+    testCar = CarModel.objects.get(pk=pk)
+    carTestDrives = TDModel.objects.filter(driveCar=testCar)
+    for drive in carTestDrives:
+        if drive.driveDate > timezone.now():
+            upcoming.append(drive)
     if request.method == 'POST':
         user = User.objects.get(username=request.user)
         car = CarModel.objects.get(id=pk)
@@ -40,4 +46,4 @@ def home(request, pk):
             return render(request, 'testdrive/pastTime.html', {'pk': pk})
     else:
         form = TDForm()
-    return render(request, 'testdrive/createTD.html', {'form': form, 'pk': pk})
+    return render(request, 'testdrive/createTD.html', {'form': form, 'pk': pk, 'upcoming': upcoming})
