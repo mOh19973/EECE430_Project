@@ -29,15 +29,15 @@ def home(request, pk):
         user = User.objects.get(username=request.user)
         car = CarModel.objects.get(id=pk)
         drive = request.POST['driveDate']
-        if not datetime.datetime.strptime(drive, '%Y-%m-%dT%H:%M') >= datetime.datetime.now() + datetime.timedelta(days=3):
+        if datetime.datetime.strptime(drive, '%Y-%m-%dT%H:%M') >= datetime.datetime.now() + datetime.timedelta(days=3):
             try:
                 TDModel.objects.get(driveCar=car, driveDate=drive)
-                return render(request, 'testdrive/fail.html')
+                return render(request, 'testdrive/fail.html', {'pk': pk})
             except ObjectDoesNotExist:
                     TDModel.objects.create(driveDate=drive, driveCar=car, driver=user)
-                    return render(request, 'testdrive/success.html')
+                    return render(request, 'testdrive/success.html', {'pk': pk})
         else:
-            return render(request, 'testdrive/pastTime.html')
+            return render(request, 'testdrive/pastTime.html', {'pk': pk})
     else:
         form = TDForm()
     return render(request, 'testdrive/createTD.html', {'form': form, 'pk': pk})

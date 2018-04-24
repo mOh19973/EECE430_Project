@@ -1,3 +1,10 @@
 {% extends 'exterior.html' %}
-{% block content %}<h1>Please pick a valid date</h1>
+{% block content %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Please pick a valid date</h1>
+            <p class="lead">To be able to book your test drive, you must reserve before at least 3 days</p>
+            <a class="btn btn-primary" href="{% url 'testdrive:booking' pk %}" role="button">Back</a>
+        </div>
+    </div>
 {% endblock %}

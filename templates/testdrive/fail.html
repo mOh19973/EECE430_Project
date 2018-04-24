@@ -1,3 +1,10 @@
 {% extends 'exterior.html' %}
-{% block content %}<h1>Time conflict, please pick another time and date</h1>
+{% block content %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Sorry, someone was faster than you</h1>
+            <p class="lead">Someone has booked this car on this date, unlucky. Book another date and take revenge!</p>
+            <a class="btn btn-primary" href="{% url 'testdrive:booking' pk %}" role="button">Back</a>
+        </div>
+    </div>
 {% endblock %}

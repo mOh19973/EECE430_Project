@@ -1,4 +1,10 @@
 {% extends 'exterior.html' %}
 {% block content %}
-    <h1>Your test drive has been scheduled! :)</h1>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">You are all set!</h1>
+            <p class="lead">Your test drive has been scheduled! See you soon!</p>
+            <a class="btn btn-primary" href="{% url 'cars:detail' pk %}" role="button">Back</a>
+        </div>
+    </div>
 {% endblock %}
