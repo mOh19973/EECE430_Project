@@ -31,20 +31,29 @@ class UserFormView(View):
     # process form data
     def post(self, request):
         form = self.form_class(request.POST)
+        isnotReg = False
         if form.is_valid():
             user = form.save(commit=False)
 
             # Cleaned normalised data
             username = form.cleaned_data['username']
             password = form.cleaned_data['password']
+            user.first_name = request.POST['first_name']
+            user.last_name = request.POST['last_name']
+            user.email = request.POST['email']
             user.set_password(password)
             user.save()
 
             # returns user objects if credentials are correct
             user = authenticate(username=username, password=password)
 
+
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return redirect('cars:index')
-        return render(request, self.template_name, {'form': form})
+                    return redirect('accounts:profile', username)
+
+        isnotReg = True
+        return render(request, self.template_name, {'form': form, 'isnotReg': isnotReg})
+
+

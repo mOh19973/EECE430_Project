@@ -10,14 +10,6 @@ from django.contrib.auth.models import User
 from .models import TDModel
 
 
-class IndexView(generic.ListView):
-    template_name = 'testdrive/index.html'
-    context_object_name = 'testdrive'
-
-    def get_queryset(self):
-        return TDModel.objects.all()
-
-
 class DetailView(generic.DetailView):
     template_name = 'testdrive/detail.html'
     model = TDModel

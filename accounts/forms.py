@@ -10,18 +10,13 @@ class UserForm(forms.ModelForm):
         model = User
         fields = ['username', 'password']
         labels ={
-            'username': 'username',
-            'password': 'password'
+            'Username': 'username',
+            'Password': 'password'
         }
 
     def __init__(self, *args, **kwargs):
         super(UserForm, self).__init__(*args, **kwargs)
         self.fields['username'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Username',
-                                                     'id': 'username',
-                                                     'style': 'margin-bottom: -1px; '
-                                                              'border-bottom-right-radius: 0; '
-                                                              'border-bottom-left-radius: 0; '
-                                                              'border-top-left-radius: 0; '
-                                                              'border-top-right-radius: 0;'})
+                                                     'id': 'username'})
         self.fields['password'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Password',
                                                      'id': 'password'})
