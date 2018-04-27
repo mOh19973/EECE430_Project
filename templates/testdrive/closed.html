@@ -1,0 +1,10 @@
+{% extends 'exterior.html' %}
+{% block content %}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Sorry, we are closed</h1>
+            <p class="lead">We operate weekdays from 8:00 to 17:00 and you are welcome to choose any time and day in between</p>
+            <a class="btn btn-primary" href="{% url 'testdrive:booking' pk %}" role="button">Back</a>
+        </div>
+    </div>
+{% endblock %}

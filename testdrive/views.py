@@ -28,12 +28,16 @@ def createTD(request, pk):
         car = CarModel.objects.get(id=pk)
         drive = request.POST['driveDate']
         if datetime.datetime.strptime(drive, '%Y-%m-%dT%H:%M') >= datetime.datetime.now() + datetime.timedelta(days=3):
-            try:
-                TDModel.objects.get(driveCar=car, driveDate=drive)
-                return render(request, 'testdrive/fail.html', {'pk': pk})
-            except ObjectDoesNotExist:
-                    TDModel.objects.create(driveDate=drive, driveCar=car, driver=user)
-                    return render(request, 'testdrive/success.html', {'pk': pk})
+            if 8 < datetime.datetime.strptime(drive, '%Y-%m-%dT%H:%M').hour < 17 \
+                    and 0 < datetime.datetime.strptime(drive, '%Y-%m-%dT%H:%M').weekday() < 4:
+                try:
+                    TDModel.objects.get(driveCar=car, driveDate=drive)
+                    return render(request, 'testdrive/fail.html', {'pk': pk})
+                except ObjectDoesNotExist:
+                        TDModel.objects.create(driveDate=drive, driveCar=car, driver=user)
+                        return render(request, 'testdrive/success.html', {'pk': pk})
+            else:
+                return render(request, 'testdrive/closed.html', {'pk': pk})
         else:
             return render(request, 'testdrive/pastTime.html', {'pk': pk})
     else:
