@@ -1,13 +1,22 @@
 import datetime
+
+from django.urls import reverse_lazy
 from django.utils import timezone
 from django.core.exceptions import ObjectDoesNotExist
 from django.shortcuts import render
 from django.views import generic
+from django.views.generic import DeleteView
 
 from cars.models import CarModel
 from .forms import TDForm
 from django.contrib.auth.models import User
 from .models import TDModel
+
+
+class TDDelete(DeleteView):
+    model = TDModel
+    user = User
+    success_url = reverse_lazy('cars:index')
 
 
 class DetailView(generic.DetailView):

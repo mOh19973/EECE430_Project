@@ -61,7 +61,8 @@
   {% if upcoming %}
        <ul>
       {% for drive in upcoming %}
-          <li>{{ drive.driveCar }} reserved on {{drive.driveDate}}</li>
+          <li>{{ drive.driveCar }} reserved on {{drive.driveDate}} <a class="badge badge-danger" href="{% url 'testdrive:delete' drive.pk %}">Cancel</a></li>
+
       {% endfor %}
       </ul>
       {% else %}
