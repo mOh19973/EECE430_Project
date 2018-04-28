@@ -9,8 +9,7 @@ def home(request, pk):
 
     if request.method == 'POST':
         user = User.objects.get(username = request.user)
-
-    BuyModel.object.create(boughtCar = buyCar.__str__, buyer = user)
-    CarModel.objects.get(pk=pk).delete()
+        BuyModel.object.create(boughtCar = buyCar.__str__, buyer = user)
+        CarModel.objects.get(pk=pk).delete()
 
     return render(request, 'buy/confirm_buy.html')
