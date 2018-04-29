@@ -21,15 +21,15 @@
 
 
 {% block content %}
-    <div class="alert alert-danger" role="alert">
+    <div class="alert alert-success" role="alert">
   Are you sure you want to buy?
 </div>
     <form class="form-horizontal" action="" method="post" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-                <button type="submit" class="btn btn-danger">Delete</button>
-                <a class="btn btn-outline-secondary" href="{% url 'cars:detal' pk %}" role="button">Back to Car</a>
+                <button type="submit" class="btn btn-success">Buy</button>
+                <a class="btn btn-outline-secondary" href="{% url 'cars:detail' pk %}" role="button">Back to Car</a>
             </div>
         </div>
     </form>

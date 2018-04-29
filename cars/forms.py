@@ -16,7 +16,7 @@ class UserForm(forms.ModelForm):
 class CarModelForm(forms.ModelForm):
     class Meta:
         model = CarModel
-        exclude = ['CarImg']
+        fields = '__all__'
         labels = {
             'CarBrand': 'Brand Name',
             'Model': 'Model Name',
@@ -26,7 +26,7 @@ class CarModelForm(forms.ModelForm):
             'TopSpeed': 'Top Speed',
             'FuelCapacity': 'Fuel Capacity',
             'Fuel': 'Fuel Type',
-            'Engine': 'Engine Type'
+            'Engine': 'Engine Size'
         }
         CarModel.CarBrand = forms.ChoiceField(choices=[car for car in CarModel.objects.all()])
 

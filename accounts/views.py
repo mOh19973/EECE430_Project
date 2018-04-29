@@ -6,16 +6,21 @@ from django.views import View
 
 from testdrive.models import TDModel
 from .forms import UserForm
+from buy.models import BuyModel
 
 
 def get_user_profile(request, username):
     user = User.objects.get(username=username)
     upcoming = []
+    boughtCars = []
     testdrive = TDModel.objects.filter(driver=user)
+    bought = BuyModel.objects.filter(buyer=user)
     for drive in testdrive:
         if drive.driveDate> timezone.now():
             upcoming.append(drive)
-    return render(request, 'accounts/user_profile.html', {"user": user, 'upcoming': upcoming})
+    for car in bought:
+        boughtCars.append(car)
+    return render(request, 'accounts/user_profile.html', {"user": user, 'upcoming': upcoming, 'boughtCars': boughtCars})
 
 
 class UserFormView(View):

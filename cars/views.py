@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from django.views import View
 from django.views import generic
 from .forms import CarModelForm
-
+from buy.models import BuyModel
 
 class IndexView(generic.ListView):
     template_name = 'cars/index.html'
@@ -22,6 +22,7 @@ class DetailView(generic.DetailView):
     model = CarModel
     template_name = 'cars/detail.html'
     user = User
+    buyer = BuyModel
 
 
 class CarCreate(CreateView):
