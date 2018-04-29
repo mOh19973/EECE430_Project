@@ -11,5 +11,5 @@ urlpatterns = [
     url(r'^details/(?P<pk>[0-9]+)$', views.DetailView.as_view(), name='detail'),
 
     # /testdrive/pk/delete/
-    url(r'^/(?P<pk>[0-9]+)/delete/$', views.TDDelete.as_view(), name='delete'),
+    url(r'^/(?P<pk>[0-9]+)/delete$', views.TDDelete.as_view(), name='delete'),
 ]
