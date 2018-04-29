@@ -32,7 +32,7 @@
         {% endif %}
         Welcome, {{ user.first_name }}!
     </h1>
-       <a href="{% url 'userphoto:addphoto' user.username %}" class="badge badge-secondary">Edit Picture</a>
+       <a href="{% url 'accounts:addphoto' user.username %}" class="badge badge-secondary">Edit Picture</a>
   </div>
     <hr class="my-4">
         <p class="lead">

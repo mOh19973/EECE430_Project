@@ -1,6 +1,6 @@
 from django.contrib.auth.models import User
 from django import forms
-
+from .models import ProfilePhoto
 
 class UserForm(forms.ModelForm):
 
@@ -20,3 +20,10 @@ class UserForm(forms.ModelForm):
                                                      'id': 'username'})
         self.fields['password'].widget.attrs.update({'class': 'form-control', 'placeholder': 'Password',
                                                      'id': 'password'})
+
+
+class PhotoForm(forms.ModelForm):
+
+    class Meta:
+        model = ProfilePhoto
+        exclude = ['userPhoto']

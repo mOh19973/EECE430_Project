@@ -6,9 +6,9 @@ from django.shortcuts import render, redirect
 from django.views import View
 
 from testdrive.models import TDModel
-from .forms import UserForm
+from .forms import UserForm, PhotoForm
 from buy.models import BuyModel
-from userphoto.models import ProfilePhoto
+from .models import ProfilePhoto
 
 
 def get_user_profile(request, username):
@@ -72,3 +72,19 @@ class UserFormView(View):
 
         isnotReg = True
         return render(request, self.template_name, {'form': form, 'isnotReg': isnotReg})
+
+
+def addphoto(request, username):
+    user = User.objects.get(username=username)
+    form = PhotoForm()
+    if request.method=='POST':
+        photo = request.POST['userImg']
+        try:
+            p = ProfilePhoto.objects.get(userPhoto=user)
+            p.userImg = photo
+            p.save()
+
+        except ObjectDoesNotExist:
+            ProfilePhoto.objects.create(userImg=photo, userPhoto=user)
+        return redirect('accounts:profile', username)
+    return render(request, 'accounts/edit_pic.html', {'form': form})

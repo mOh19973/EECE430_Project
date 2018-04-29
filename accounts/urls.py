@@ -17,4 +17,7 @@ urlpatterns = [
     # /accounts/profile/
     url(r'^profile/(?P<username>[a-zA-Z0-9]+)$', views.get_user_profile, name='profile'),
 
+    # /accounts/profile/username/edit
+    url(r'^profile/(?P<username>[a-zA-Z0-9]+)/edit$', views.addphoto, name='addphoto'),
+
 ]
