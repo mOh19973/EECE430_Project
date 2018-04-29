@@ -1,0 +1,11 @@
+#menu{
+    display:block;
+    padding:0;
+    text-align:center;
+    margin:50px;
+}
+
+#menu li {
+    display:inline-block;
+    margin: 30px;
+}

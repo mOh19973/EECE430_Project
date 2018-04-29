@@ -24,7 +24,15 @@
     <div class="jumbotron jumbotron-fluid">
   <div class="container">
 
-    <h1 class="display-4"> <img src="{% static 'img/back.jpg' %}" style="width: 300px;" alt="{{user.username}}"> Welcome, {{ user.first_name }}!</h1>
+    <h1 class="display-4">
+        {% if hasPhoto %}
+            <img src="{{ photo.url }}" style="width: 300px; height: 300px;">
+        {% else %}
+        <img src="{% static 'img/default-img.png' %}" style="width: 300px;" alt="{{user.username}}">
+        {% endif %}
+        Welcome, {{ user.first_name }}!
+    </h1>
+       <a href="{% url 'userphoto:addphoto' user.username %}" class="badge badge-secondary">Edit Picture</a>
   </div>
     <hr class="my-4">
         <p class="lead">

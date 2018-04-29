@@ -20,7 +20,7 @@ urlpatterns = [
     url(r'^model/(?P<pk>[0-9]+)/$', views.CarUpdate.as_view(), name='cars-update'),
 
     # /cars/model/pk/delete/
-    url(r'^model/(?P<pk>[0-9]+)/delete$', views.CarDelete.as_view(), name='cars-delete'),
+    url(r'^model/(?P<pk>[0-9]+)/delete/$', views.CarDelete.as_view(), name='cars-delete'),
 
     # /cars/search
     url(r'^search/$', views.Search.as_view(), name='search'),

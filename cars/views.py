@@ -8,6 +8,7 @@ from django.views import generic
 from .forms import CarModelForm
 from buy.models import BuyModel
 
+
 class IndexView(generic.ListView):
     template_name = 'cars/index.html'
     context_object_name = 'carList'

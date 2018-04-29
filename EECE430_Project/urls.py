@@ -11,6 +11,7 @@ urlpatterns = [
     url(r'^cars/', include('cars.urls'), name='car'),
     url(r'^accounts/', include('accounts.urls'), name='accounts'),
     url(r'^buy/', include('buy.urls'), name='buy'),
+    url(r'^userphoto/', include('userphoto.urls'), name='userphoto'),
     url(r'^testdrive/', include('testdrive.urls'), name='testdrive'),
     url(r'^account/$', views.account_redirect, name='account-redirect'),
 ]

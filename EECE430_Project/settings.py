@@ -33,6 +33,7 @@ INSTALLED_APPS = [
     'accounts',
     'testdrive',
     'buy',
+    'userphoto',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',

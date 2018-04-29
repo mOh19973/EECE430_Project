@@ -1,0 +1,25 @@
+{% extends 'exterior.html' %}
+{% load static %}
+{% block title %}Photo Form{% endblock %}
+
+{% block content %}
+    <body>
+    <div class="jumbotron">
+        <h1 class="display-5">Edit Photo</h1>
+        <hr class="my-4">
+      <form action="" method="post">
+          {% csrf_token %}
+          <div>
+              <div class="panel-body">
+                  <h1 class="h3 mb-3 font-weight-normal">Please upload a picture</h1>
+                  <div class="form-row align-items-center">
+                      {% include 'cars/formtemplate.html' %}
+                  </div>
+              </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <a class="btn btn-secondary" href="{% url 'accounts:profile' user.username %}" role="button">Back to Profile</a>
+      </form>
+    </div>
+    </body>
+{% endblock %}

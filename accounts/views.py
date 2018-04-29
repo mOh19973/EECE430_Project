@@ -1,3 +1,4 @@
+from django.core.exceptions import ObjectDoesNotExist
 from django.utils import timezone
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
@@ -7,10 +8,20 @@ from django.views import View
 from testdrive.models import TDModel
 from .forms import UserForm
 from buy.models import BuyModel
+from userphoto.models import ProfilePhoto
 
 
 def get_user_profile(request, username):
     user = User.objects.get(username=username)
+    template_dict = {}
+    hasPhoto = False
+    try:
+        profilephoto = ProfilePhoto.objects.get(userPhoto=user)
+        hasPhoto = True
+        photo = profilephoto.userImg
+        template_dict.update({'photo': photo, 'hasPhoto': hasPhoto})
+    except ObjectDoesNotExist:
+        hasPhoto = False
     upcoming = []
     boughtCars = []
     testdrive = TDModel.objects.filter(driver=user)
@@ -20,7 +31,8 @@ def get_user_profile(request, username):
             upcoming.append(drive)
     for car in bought:
         boughtCars.append(car)
-    return render(request, 'accounts/user_profile.html', {"user": user, 'upcoming': upcoming, 'boughtCars': boughtCars})
+    template_dict.update({"user": user, 'upcoming': upcoming, 'boughtCars': boughtCars})
+    return render(request, 'accounts/user_profile.html', template_dict)
 
 
 class UserFormView(View):
@@ -60,5 +72,3 @@ class UserFormView(View):
 
         isnotReg = True
         return render(request, self.template_name, {'form': form, 'isnotReg': isnotReg})
-
-
