@@ -28,15 +28,11 @@
         <h1 class="display-4">  <img src="{{car.CarImg.url}}" style="width: 300px;" alt="{{car.Model}}"> {{ car}} </h1>
         {% if user.is_authenticated %}
             <a  href="{% url 'testdrive:booking' car.id%}" class="badge badge-secondary">Book a test drive</a>
-        {% else %}
-             <a  href="" class="badge badge-secondary">Book a test drive </a>
-            <span class="badge badge-danger">Please register or login to access this feature</span>
-        {% endif %}
-        {% if user.is_authenticated %}
             <a  href="{% url 'buy:home' car.id%}" class="badge badge-secondary">Buy this car</a>
         {% else %}
-             <a  href="" class="badge badge-secondary">Buy this car</a>
-            <span class="badge badge-danger">Please register or login to access this feature</span>
+            <a  href="" class="badge badge-secondary">Book a test drive </a>
+            <a  href="" class="badge badge-secondary">Buy this car</a>
+            <span class="badge badge-danger">Please register or login to access these features</span>
         {% endif %}
         <hr class="my-4">
         <p class="lead">
