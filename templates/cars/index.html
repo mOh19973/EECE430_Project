@@ -22,7 +22,7 @@
         {% endif %}
     {% endblock %}
 {% block content %}
-    {% if user.is_authenticated %}
+    {% if user.is_authenticated and user.is_staff %}
         <div class="card-body">
             <a href="{% url 'cars:cars-add' %}" class="btn btn-primary btn-outline-secondary" style="position: absolute; TOP:100px; right:179px;" >Add a car</a>
         </div>
@@ -37,13 +37,13 @@
                   <div class="card-body">
                       <h5 class="card-title">{{car}}</h5>
                       <p class="card-text">{{car.Transmission}} </p>
-                      {% if user.is_authenticated %}
+                      {% if user.is_authenticated and user.is_staff %}
                           <a class="btn btn-primary btn-info" href="{%url 'cars:cars-update' car.id%}" role="button">Edit</a>
                       {% endif %}
                       {% block details %}
                           <a href="{% url 'cars:detail' car.id %}" class="btn btn-primary">Details</a>
                       {% endblock %}
-                      {% if user.is_authenticated %}
+                      {% if user.is_authenticated and user.is_staff %}
                           <a class="btn btn-primary btn-danger" href="{%url 'cars:cars-delete' car.id%}" role="button">Delete</a>
                       {% endif%}
                   </div>

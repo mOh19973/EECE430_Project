@@ -63,8 +63,7 @@ class UserFormView(View):
 
             # returns user objects if credentials are correct
             user = authenticate(username=username, password=password)
-
-
+            
             if user is not None:
                 if user.is_active:
                     login(request, user)
