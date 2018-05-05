@@ -1,0 +1,40 @@
+{% extends 'exterior.html' %}
+{% load static %}
+{% block title %}Car Form{% endblock %}
+{% block login %}
+        {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'accounts:profile' username=user.username %}" style="color: white; ">Welcome, {{ user.first_name }}</a>
+        {% else %}
+            <a class="nav-item nav-link" href="{% url 'accounts:login' %}" style="color: white; ">Login</a>
+        {% endif %}
+    {% endblock %}
+
+    {% block logout %}
+        {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'accounts:logout' %}" style="color: white; ">Logout</a>
+        {% else %}
+
+            <a class="nav-item nav-link" href="{% url 'accounts:register' %}" style="color:white;">Register</a>
+        {% endif %}
+    {% endblock %}
+{% block content %}
+    <body>
+    <div class="jumbotron">
+        <h1 class="display-5">Car Form</h1>
+        <hr class="my-4">
+      <form action="" method="post">
+          {% csrf_token %}
+          <div>
+              <div class="panel-body">
+                  <h1 class="h3 mb-3 font-weight-normal"> Please specify the following</h1>
+                  <div class="form-row align-items-center">
+                      {% include 'cars/formtemplate.html' %}
+                  </div>
+              </div>
+          </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <a class="btn btn-secondary" href="{% url 'cars:index' %}" role="button">Back to Index</a>
+      </form>
+    </div>
+    </body>
+{% endblock %}

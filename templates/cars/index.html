@@ -1,6 +1,8 @@
 {% extends   'exterior.html' %}
 {% load staticfiles %}
-
+{% block add %} {% if user.is_authenticated and user.is_staff %}
+            <a href="{% url 'cars:cars-add' %}" class="btn btn-primary btn-outline-info">Add Car</a>
+    {% endif %} {% endblock %}
 {% block title%} Car Index {% endblock %}
 {% block css %}
     <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
@@ -22,11 +24,7 @@
         {% endif %}
     {% endblock %}
 {% block content %}
-    {% if user.is_authenticated and user.is_staff %}
-        <div class="card-body">
-            <a href="{% url 'cars:cars-add' %}" class="btn btn-primary btn-outline-secondary" style="position: absolute; TOP:100px; right:179px;" >Add a car</a>
-        </div>
-    {% endif %}
+
 
   <!-- Car Cards -->
   <ul id="menu">

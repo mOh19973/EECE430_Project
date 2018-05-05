@@ -1,0 +1,214 @@
+{% extends 'exterior.html' %}
+{% load static %}
+{% block title %}Car Form{% endblock %}
+{% block login %}
+        {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'accounts:profile' username=user.username %}" style="color: white; ">Welcome, {{ user.first_name }}</a>
+        {% else %}
+            <a class="nav-item nav-link" href="{% url 'accounts:login' %}" style="color: white; ">Login</a>
+        {% endif %}
+    {% endblock %}
+
+    {% block logout %}
+        {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'accounts:logout' %}" style="color: white; ">Logout</a>
+        {% else %}
+
+            <a class="nav-item nav-link" href="{% url 'accounts:register' %}" style="color:white;">Register</a>
+        {% endif %}
+    {% endblock %}
+{% block content %}
+    <body>
+    <div class="jumbotron">
+        <h1 class="display-5">Car Form</h1>
+        <hr class="my-4">
+      <form action="" method="post">
+          {% csrf_token %}
+          <div>
+              <div class="panel-body">
+                  <h1 class="h3 mb-3 font-weight-normal"> Please specify the following</h1>
+                  <div class="form-row align-items-center">
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Car Brand</div>
+                              </div>
+                              <input type="text" class="form-control" id="exampleInputName1" title="CarBrand" name="CarBrand" placeholder="Ex: Volkswagen" required>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Car Model</div>
+                              </div>
+                              <input type="text" class="form-control" id="inlineFormInputGroup" title="Model" name="Model" placeholder="Ex: Passat" required>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Year of Manufacture</div>
+                              </div>
+
+                              <input type="month" class="form-control" placeholder="Year" aria-label="Year" aria-describedby="basic-addon1" name="Year" required>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Engine Capacity</div>
+                              </div>
+                              <input type="number" class="form-control" id="inlineFormInputGroup" title="Model" min="1.0" max="5.0" name="Engine" placeholder="Ex: 1.0" step="0.1" required>
+                              <div class="input-group-append">
+                                <span class="input-group-text">L</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Number of Gears</div>
+                              </div>
+                              <input type="number" class="form-control" id="inlineFormInputGroup" min="3" max="7" title="GearNum" name="GearNum" placeholder="Ex: 4" required>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Transmission Type</div>
+                              </div>
+                                <select class="custom-select" id="inputGroupSelect01" title="TransmissionType" name="TransmissionType">
+                                    <option selected>MANUAL</option>
+                                    <option value="AUTOMATIC">AUTOMATIC</option>
+                                    <option value="AUTO DIRECT SHIFT">AUTO DIRECT SHIFT</option>
+                                    <option value="AUTO G-TRONIC">AUTO G-TRONIC</option>
+                                    <option value="CVT MULTITRONIC">CVT MULTITRONIC</option>
+                                    <option value="SEQUENTIAL AUTO">SEQUENTIAL AUTO</option>
+                                    <option value="AUTO STEPTRONIC">AUTO STEPTRONIC</option>
+                                </select>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Number of Doors</div>
+                              </div>
+                              <input type="number" class="form-control" id="inlineFormInputGroup" title="DoorsNum" min="2" max="6" name="DoorsNum" placeholder="Ex: 2" step="2" required>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Weight of Car</div>
+                              </div>
+                              <input type="number" class="form-control" id="inlineFormInputGroup" title="Weight" min="1000" max="10000" name="Weight" placeholder="Ex: 1000" required>
+                              <div class="input-group-append">
+                                <span class="input-group-text">KG</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Fuel Type</div>
+                              </div>
+                              <select class="custom-select" id="inputGroupSelect01" title="FuelType" name="Fuel" required>
+                                    <option selected>95 Petrol</option>
+                                    <option value="98 Petrol">98 Petrol</option>
+                                    <option value="Diesel">Diesel</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Body Type</div>
+                              </div>
+                              <select class="custom-select" id="inputGroupSelect01" title="BodyType" name="BodyType" required>
+                                  <option selected>Sedan</option>
+                                  <option value="Hatchback">Hatchback</option>
+                                  <option value="Coupe">Coupe</option>
+                                  <option value="SUV">SUV</option>
+                                  <option value="Mini-SUV">Mini-SUV</option>
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Number of Cylinders</div>
+                              </div>
+                               <input type="number" class="form-control" id="inlineFormInputGroup" min="4" max="8" title="CylindersNum" name="CylindersNum" placeholder="Ex: 4" required>
+                                <select class="custom-select" id="inputGroupSelect01" title="CylindersType" name="CylindersType">
+                                    <option selected>INLINE</option>
+                                    <option value="AUTOMATIC">TURBO</option>
+                                </select>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Horsepower</div>
+                              </div>
+                              <input type="number" class="form-control" id="inlineFormInputGroup" title="HP" min="66" max="1000" name="HP" placeholder="Ex: 100" required>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Top Speed</div>
+                              </div>
+                              <input type="number" class="form-control" id="inlineFormInputGroup" title="TopSpeed" min="110" max="429" name="TopSpeed" placeholder="Ex: 220" required>
+                              <div class="input-group-append">
+                                <span class="input-group-text">KM/H</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Fuel Capacity</div>
+                              </div>
+                              <input type="number" class="form-control" id="inlineFormInputGroup" title="FuelCapacity" min="40" max="100" name="FuelCapacity" placeholder="Ex: 42" required>
+                              <div class="input-group-append">
+                                <span class="input-group-text">L</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Country of Manufacture</div>
+                              </div>
+                               <select class="custom-select" id="inputGroupSelect01" title="Country" name="Country" required>
+                                  {% include 'country_select.html' %}
+                              </select>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Mileage</div>
+                              </div>
+                              <input type="number" class="form-control" id="inlineFormInputGroup" title="Mileage" min="0" max="6000000" name="Mileage" placeholder="Ex: 14300"required>
+                              <div class="input-group-append">
+                                <span class="input-group-text">KM</span>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-auto">
+                          <div class="input-group mb-2">
+                              <div class="input-group-prepend">
+                                  <div class="input-group-text">Color</div>
+                              </div>
+                                 <input type="text" class="form-control" title="Color" name="Color" placeholder="Ex: Red" required>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <a class="btn btn-secondary" href="{% url 'cars:index' %}" role="button">Back to Index</a>
+      </form>
+    </div>
+    </body>
+{% endblock %}

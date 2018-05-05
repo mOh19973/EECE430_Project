@@ -28,7 +28,6 @@ class CarModelForm(forms.ModelForm):
             'Fuel': 'Fuel Type',
             'Engine': 'Engine Size'
         }
-        CarModel.CarBrand = forms.ChoiceField(choices=[car for car in CarModel.objects.all()])
 
     def __init__(self, *args, **kwargs):
         super(CarModelForm, self).__init__(*args, **kwargs)

@@ -64,7 +64,7 @@
                                 <select class="custom-select" id="inputGroupSelect01" name="Year">
                                     <option selected>All</option>
                                     {% for car in orderedByYear %}
-                                        <option value="{{ car.Year }}">{{ car.Year }}</option>
+                                        <option value="{{ car.Year.year }}">{{ car.Year.year }}</option>
                                     {% endfor %}
                                 </select>
                             </div>
@@ -72,7 +72,7 @@
                         <div class="col-auto">
                             <div class="input-group mb-2">
                                 <div class="input-group-prepend">
-                                    <label class="input-group-text" for="inputGroupSelect01">Engine</label>
+                                    <label class="input-group-text" for="inputGroupSelect01">Engine Capacity</label>
                                 </div>
                                 <select class="custom-select" id="inputGroupSelect01" name="Engine">
                                     <option selected>All</option>

@@ -14,7 +14,7 @@ urlpatterns = [
     url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(),  name='detail'),
 
     # /cars/model/add
-    url(r'^model/add/$', views.CarCreate.as_view(), name='cars-add'),
+    url(r'^model/add/$', views.CarCreate, name='cars-add'),
 
     # /cars/model/pk/
     url(r'^model/(?P<pk>[0-9]+)/$', views.CarUpdate.as_view(), name='cars-update'),

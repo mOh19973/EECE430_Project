@@ -3,7 +3,7 @@ from django.db import models
 
 
 class ProfilePhoto(models.Model):
-    userImg= models.ImageField(upload_to='media', default=1)
+    userImg= models.ImageField(upload_to='media', default='media/default-img.png')
     userPhoto = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
 
     def __str__(self):

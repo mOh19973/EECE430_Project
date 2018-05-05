@@ -1,12 +1,13 @@
 from django.contrib.auth.models import User
-from django.shortcuts import render
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.shortcuts import render, redirect
+from django.views.generic.edit import UpdateView, DeleteView
 from .models import CarModel
 from django.urls import reverse_lazy
 from django.views import View
 from django.views import generic
 from .forms import CarModelForm
 from buy.models import BuyModel
+import datetime
 
 
 class IndexView(generic.ListView):
@@ -26,10 +27,68 @@ class DetailView(generic.DetailView):
     buyer = BuyModel
 
 
-class CarCreate(CreateView):
-    model = CarModel
-    user = User
-    form_class = CarModelForm
+def CarCreate(request):
+    user = User.objects.get(username=request.user)
+    if request.method == 'POST':
+        carspecs = ['CarBrand',
+                    'Model',
+                    'Year',
+                    'Engine',
+                    'GearNum',
+                    'TransmissionType',
+                    'DoorsNum',
+                    'Weight',
+                    'Fuel',
+                    'BodyType',
+                    'CylindersNum',
+                    'CylindersType',
+                    'HP',
+                    'TopSpeed',
+                    'FuelCapacity',
+                    'Country',
+                    'Mileage',
+                    'Color']
+
+        form_data = []
+        for l in carspecs:
+            form_data.append(request.POST.get(l))
+
+        carBrand = form_data.__getitem__(0).capitalize()
+        model = form_data.__getitem__(1).capitalize()
+        year=datetime.datetime.strptime(form_data.__getitem__(2), '%Y-%m').year.__str__() + '-01-01'
+        engine = form_data.__getitem__(3)
+        transmission = form_data.__getitem__(4) + ' SP '+ form_data.__getitem__(5)
+        doorsNum = form_data.__getitem__(6)
+        weight = form_data.__getitem__(7)
+        fuelType = form_data.__getitem__(8)
+        bodyType = form_data.__getitem__(9)
+        cylinders = form_data.__getitem__(11) + ' ' + form_data.__getitem__(10)
+        hp = form_data.__getitem__(12)
+        topSpeed = form_data.__getitem__(13)
+        fuelCap = form_data.__getitem__(14)
+        country = form_data.__getitem__(15)
+        mileage = form_data.__getitem__(16)
+        color = form_data.__getitem__(17).capitalize()
+
+        CarModel.objects.create(CarBrand=carBrand,
+                                Model=model,
+                                Year=year,
+                                Engine=engine,
+                                Transmission=transmission,
+                                DoorsNum=doorsNum,
+                                Weight=weight,
+                                Fuel=fuelType,
+                                BodyType=bodyType,
+                                Cylinders=cylinders,
+                                HP=hp,
+                                TopSpeed=topSpeed,
+                                FuelCapacity=fuelCap,
+                                Country=country,
+                                Mileage=mileage,
+                                Color=color)
+        return redirect('cars:index')
+
+    return render(request, 'cars/CarModel_add.html', {'user': user})
 
 
 class CarUpdate(UpdateView):
@@ -70,8 +129,11 @@ class Search(View):
             searchedItem = searchedItem.filter(CarBrand=form_data.__getitem__(0))
         if not form_data[1] == "All":
             searchedItem = searchedItem.filter(Model=form_data.__getitem__(1))
-        if not form_data[2] == "All":
-            searchedItem = searchedItem.filter(Year=form_data.__getitem__(2))
+        if not form_data[2] == "All" and not form_data[2] is None:
+            year = datetime.datetime(datetime.datetime.strptime(form_data.__getitem__(2), '%Y').year, 1, 1)
+            searchedItem = searchedItem.filter(Year=year)
+        else:
+            searchedItem = searchedItem.all()
         if not form_data[3] == "All":
             searchedItem = searchedItem.filter(Engine=form_data.__getitem__(3))
         if not form_data[4] == "All":

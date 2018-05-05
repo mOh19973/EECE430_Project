@@ -37,12 +37,11 @@
             {% block logout %}{% endblock %}
 
 
-            <form class="form-inline my-2 my-lg-0">
-                <a class="btn btn-outline-success my-2 my-sm-0" href="{% url 'cars:search' %}">Search</a>
-
-                <div class="form-inline my-2 my-lg-0">
+            <div class="inline-group d-inline p-sm-1">
+                <a class="btn btn-outline-success" href="{% url 'cars:search' %}">Search</a></div>
+        <div class="inline-group d-inline p-sm-1">
+                {% block add %} {% endblock %}</div>
             </div>
-            </form>
 
 
         </div>
