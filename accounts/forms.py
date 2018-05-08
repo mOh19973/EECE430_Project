@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django import forms
 from .models import ProfilePhoto
 
+
 class UserForm(forms.ModelForm):
 
     password = forms.CharField(widget=forms.PasswordInput)
@@ -10,8 +11,8 @@ class UserForm(forms.ModelForm):
         model = User
         fields = ['username', 'password']
         labels ={
-            'Username': 'username',
-            'Password': 'password'
+            'username': 'Username',
+            'password': 'Password'
         }
 
     def __init__(self, *args, **kwargs):
@@ -27,3 +28,8 @@ class PhotoForm(forms.ModelForm):
     class Meta:
         model = ProfilePhoto
         exclude = ['userPhoto']
+        labels = {'userImg': 'Photo'}
+
+    def __int__(self, *args, **kwargs):
+        super(PhotoForm, self).__init__(*args, **kwargs)
+        self.fields['userImg'].widget.attrs.update({'class': 'custom-file-input', 'id': 'inputGroupFile01'})

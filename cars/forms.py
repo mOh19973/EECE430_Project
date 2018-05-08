@@ -1,5 +1,6 @@
 from django.contrib.auth.models import User
 from django import forms
+from django.forms import TextInput
 
 from cars.models import CarModel
 

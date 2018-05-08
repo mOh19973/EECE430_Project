@@ -23,7 +23,7 @@ class CarModel(models.Model):
     Color = models.CharField(max_length=5000)
 
     def get_absolute_url(self):
-        return reverse('cars:detail', kwargs={'pk': self.pk})
+        return reverse('cars:detail', kwargs={'pk': self.id})
 
     def __str__(self):
         return self.CarBrand + ' - ' + self.Model + ' ' + str(self.Year.year)

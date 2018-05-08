@@ -29,6 +29,7 @@ class DetailView(generic.DetailView):
 
 def CarCreate(request):
     user = User.objects.get(username=request.user)
+    form = CarModelForm
     if request.method == 'POST':
         carspecs = ['CarBrand',
                     'Model',
@@ -88,7 +89,7 @@ def CarCreate(request):
                                 Color=color)
         return redirect('cars:index')
 
-    return render(request, 'cars/CarModel_add.html', {'user': user})
+    return render(request, 'cars/CarModel_add.html', {'user': user, 'form':form})
 
 
 class CarUpdate(UpdateView):
