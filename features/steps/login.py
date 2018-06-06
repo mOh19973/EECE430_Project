@@ -24,11 +24,12 @@ def step_impl(context):
     br.find_element_by_name('submit').click()
 
 
-@then('I am redirected to login success page')
+@then('I am redirected to the login success page')
 def step_impl(context):
     br = context.browser
 
     assert br.current_url.endswith('/accounts/profile/foo')
+    br.find_element_by_name('logout').click()
 
 
 @when('I submit an invalid login page')
@@ -48,4 +49,4 @@ def step_impl(context):
 def step_impl(context):
     br = context.browser
 
-    assert br.current_url.endswith('accounts/login/')
+    assert br.current_url.endswith('/accounts/login/')
